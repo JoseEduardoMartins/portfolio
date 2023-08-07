@@ -1,0 +1,16 @@
+.project {
+    width: 100%;
+    min-height: 200px;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(8,minmax(0,1fr));
+}
+
+.project_date {
+
+    border: 1px solid red;
+}
+
+.project_data {
+    border: 1px solid red;
+}
