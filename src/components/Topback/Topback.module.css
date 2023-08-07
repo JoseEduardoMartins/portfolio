@@ -1,0 +1,9 @@
+.button {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    padding: 15px;
+    border: 1px solid red;
+    border-radius: 100%;
+}

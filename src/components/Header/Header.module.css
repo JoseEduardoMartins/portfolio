@@ -1,0 +1,34 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    /* border-bottom: 0.1px solid var(--fourth-color); */
+}
+
+.link {
+    font-size: 18px;
+    color: var(--second-color);
+}
+
+.link, .menu_link {
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu_link {
+    font-size: 17px;
+    color: var(--third-color);
+}
+
+.menu_link:hover {
+    color: var(--second-color);
+}

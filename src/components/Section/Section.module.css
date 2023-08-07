@@ -1,0 +1,12 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.container_data {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+}
