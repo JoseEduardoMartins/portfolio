@@ -1,0 +1,15 @@
+.text {
+    font-size: 16px;
+}
+
+.color_primary {
+    color: var(--second-color);
+}
+
+.color_secondary {
+    color: var(--fourth-color);
+}
+
+.color_tertiary {
+    color: var(--first-color);
+}

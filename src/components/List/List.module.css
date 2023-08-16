@@ -1,0 +1,35 @@
+.list {
+  display: flex;
+}
+
+.gap_10 {
+  gap: 10px;
+}
+
+.gap_20 {
+  gap: 20px;
+}
+
+.direction_row {
+  flex-direction: row;
+}
+
+.direction_column {
+  flex-direction: column;
+}
+
+.justify_flex-start {
+  justify-content: flex-start;
+}
+
+.justify_space-between {
+  justify-content: space-between;
+}
+
+.justify_space-around {
+  justify-content: space-around;
+}
+
+.flexWrap_wrap {
+  flex-wrap: wrap;
+}

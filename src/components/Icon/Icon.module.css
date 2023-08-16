@@ -1,10 +1,30 @@
-.icon {
+.size_small {
     width: 20px;
     height: 20px;
+}
+
+.size_medium {
+    width: 30px;
+    height: 30px;
+}
+
+.size_large {
+    width: 40px;
+    height: 40px;
+}
+
+.color_primary {
     color: var(--third-color);
 }
 
-.icon:hover {
+.link_primary:hover {
     color: var(--fourth-color);
-    cursor: pointer;
+}
+
+.color_secondary {
+    color: var(--first-color);
+}
+
+.link_secondary:hover {
+    color: var(--second-color);
 }

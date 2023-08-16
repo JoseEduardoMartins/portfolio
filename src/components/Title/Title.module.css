@@ -1,0 +1,16 @@
+.title {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.primary {
+    color: var(--second-color);
+}
+
+.secondary {
+    color: var(--third-color);
+}
+
+.tertiary {
+    color: var(--fourth-color);
+}

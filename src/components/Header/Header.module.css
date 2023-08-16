@@ -7,15 +7,16 @@
     justify-content: space-between;
     align-items: center;
     padding: 0px 40px;
-    /* border-bottom: 0.1px solid var(--fourth-color); */
+    background-color: var(--first-color);
+    opacity: 0.9;
 }
 
-.link {
-    font-size: 18px;
+.logo {
+    font-size: 25px;
     color: var(--second-color);
 }
 
-.link, .menu_link {
+.logo, .menu_link {
     font-weight: bold;
 }
 
