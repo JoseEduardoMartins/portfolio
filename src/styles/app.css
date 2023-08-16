@@ -1,0 +1,9 @@
+body {
+  background-color: var(--first-color);
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  color: var(--third-color);
+}

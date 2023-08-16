@@ -1,0 +1,32 @@
+.repository_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.repository_header_title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.repository_body {
+    text-indent: 50px;
+    text-align: justify;
+}
+
+.repository_footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.repository_footer_counts {
+    display: flex;
+    gap: 10px;
+}
+
+.repository_footer_count {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

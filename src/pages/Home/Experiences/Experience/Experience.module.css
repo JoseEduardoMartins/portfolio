@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  gap: 30px;
+}
+
+.header_data{
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: var(--second-color);
+}

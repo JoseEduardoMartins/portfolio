@@ -1,0 +1,8 @@
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-grow: 1;
+    flex-basis: 0;
+}

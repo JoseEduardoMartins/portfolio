@@ -1,0 +1,35 @@
+.subtitle {
+    position: relative;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.subtitle > span {
+    position: absolute;
+    font-size: 10px;
+    color: var(--first-color);
+    background-color: var(--second-color);
+    border-radius: 30px;
+    padding: 5px 10px;
+}
+
+.color_primary {
+    color: var(--first-color);
+}
+
+.color_secondary {
+    color: var(--second-color);
+}
+
+.color_tertiary {
+    color: var(--third-color);
+}
+
+.color_quaternary {
+    color: var(--fourth-color);
+}
+
+.color_five-year {
+    color: var(--fifth-color);
+}
