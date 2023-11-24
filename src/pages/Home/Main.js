@@ -7,16 +7,16 @@ import Contact from "./Contact";
 import style from "./Main.module.css";
 
 const Main = () => {
-    return (
-        <div className={style.main}>
-            <Introduction />
-            <About />
-            <Experiences />
-            <Repositories />
-            <Skils />
-            <Contact />
-        </div>
-    )
-}
+  return (
+    <div className={style.main}>
+      <Introduction />
+      <About />
+      <Experiences />
+      <Repositories id="repositories" />
+      <Skils />
+      <Contact />
+    </div>
+  );
+};
 
 export default Main;
