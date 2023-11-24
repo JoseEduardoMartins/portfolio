@@ -1,13 +1,19 @@
 .container {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 70px;
-    height: calc(100vh - 70px);
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: column;
-    gap: 30px;
-    padding-bottom: 100px;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 70px;
+  height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 100px;
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    display: none;
+  }
 }

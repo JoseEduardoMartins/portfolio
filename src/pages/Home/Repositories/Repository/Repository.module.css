@@ -1,32 +1,41 @@
 .repository_header {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .repository_header_title {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .repository_body {
-    text-indent: 50px;
-    text-align: justify;
+  text-indent: 50px;
+  text-align: justify;
 }
 
 .repository_footer {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .repository_footer_counts {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .repository_footer_count {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  .repository_footer_counts {
+    gap: 20px;
+  }
+  .repository_footer_count_label {
+    display: none;
+  }
 }
