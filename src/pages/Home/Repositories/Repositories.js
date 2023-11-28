@@ -38,7 +38,7 @@ const Repositories = () => {
   }, []);
 
   return (
-    <Section>
+    <Section id="repositories">
       <Subtitle>
         Repositories
         <span>{repository.length}</span>

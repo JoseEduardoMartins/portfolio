@@ -23,6 +23,7 @@
 
 .menu {
   display: flex;
+  align-items: center;
   gap: 30px;
 }
 
@@ -33,6 +34,35 @@
 
 .menu_link:hover {
   color: var(--second-color);
+}
+
+.menu_language {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0px 0.5rem;
+}
+
+.menu_language_list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.menu_language_item {
+  margin: 0.25rem;
+}
+
+.menu_language_item_button {
+  padding: 0px;
+  border: none;
+  background-color: transparent;
+  transition: filter 0.4s ease 0s;
+  filter: none;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 900px) {

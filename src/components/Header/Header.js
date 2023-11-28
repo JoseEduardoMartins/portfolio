@@ -16,9 +16,6 @@ const Header = () => {
         <a className={style.menu_link} href="#repositories">
           Repositories
         </a>
-        <a className={style.menu_link} href="#skils">
-          Skills
-        </a>
         <a className={style.menu_link} href="#contact">
           Contact
         </a>
