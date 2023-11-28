@@ -4,19 +4,19 @@ import Experiences from "./Experiences";
 import Repositories from "./Repositories";
 import Skils from "./Skils";
 import Contact from "./Contact";
-import style from "./Main.module.css";
+import style from "./Home.module.css";
 
-const Main = () => {
+const Home = () => {
   return (
-    <div className={style.main}>
+    <div className={style.home}>
       <Introduction />
       <About />
       <Experiences />
-      <Repositories id="repositories" />
+      <Repositories />
       <Skils />
       <Contact />
     </div>
   );
 };
 
-export default Main;
+export default Home;
