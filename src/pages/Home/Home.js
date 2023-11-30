@@ -7,16 +7,16 @@ import Contact from "./Contact";
 import style from "./Home.module.css";
 
 const Home = () => {
-  return (
-    <div className={style.home}>
-      <Introduction />
-      <About />
-      <Experiences />
-      <Repositories />
-      <Skils />
-      <Contact />
-    </div>
-  );
+    return (
+        <div className={style.home}>
+            <Introduction />
+            <About />
+            <Experiences />
+            <Repositories />
+            <Skils />
+            <Contact />
+        </div>
+    );
 };
 
 export default Home;
