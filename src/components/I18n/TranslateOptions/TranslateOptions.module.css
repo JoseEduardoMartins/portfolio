@@ -1,0 +1,8 @@
+.flags-container {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px 0.5rem;
+    gap: 5px;
+}
