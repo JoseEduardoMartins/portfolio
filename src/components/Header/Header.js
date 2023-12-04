@@ -1,23 +1,25 @@
-import Translator from "../I18n/Translator";
-import TranslateOptions from "../I18n/TranslateOptions";
-import Icon from "../Icon";
+// import Translator from "../I18n/Translator";
+// import TranslateOptions from "../I18n/TranslateOptions";
+// import Icon from "../Icon";
+import Menu from "./Menu";
 import style from "./Header.module.css";
 
 const Header = () => {
-    const handleMenu = () => {
-        const element = document.getElementById("menu");
+    // const handleMenu = () => {
+    //     const element = document.getElementById("menu");
 
-        const value = window.getComputedStyle(element).display;
+    //     const value = window.getComputedStyle(element).display;
 
-        element.style.display = value === "none" ? "flex" : "none";
-    };
+    //     element.style.display = value === "none" ? "flex" : "none";
+    // };
 
     return (
         <header className={style.header}>
             <a className={style.logo} href="/#">
                 José Eduardo Martins
             </a>
-            <div className={style.burger} onClick={handleMenu}>
+            <Menu />
+            {/* <div className={style.burger} onClick={handleMenu}>
                 <Icon>menu</Icon>
             </div>
             <nav id="menu" className={style.menu}>
@@ -34,7 +36,7 @@ const Header = () => {
                     <Translator path="header.contact" />
                 </a>
                 <TranslateOptions />
-            </nav>
+            </nav> */}
         </header>
     );
 };
