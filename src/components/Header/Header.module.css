@@ -27,6 +27,11 @@
     gap: 30px;
 }
 
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
 .menu_link {
     font-size: 17px;
     color: var(--third-color);
@@ -36,24 +41,18 @@
     color: var(--second-color);
 }
 
-.menu_language_item {
-    margin: 0.25rem;
-}
-
-.menu_language_item_button {
-    padding: 0px;
-    border: none;
-    background-color: transparent;
-    transition: filter 0.4s ease 0s;
-    filter: none;
-    cursor: pointer;
-}
-
 @media only screen and (max-width: 900px) {
-    .header {
-        justify-content: center;
-    }
     .menu {
         display: none;
+        position: absolute;
+        top: 70px;
+        right: 0px;
+        flex-direction: column;
+        padding: 20px 50px 50px;
+        background-color: var(--first-color);
+        opacity: 1;
+    }
+    .burger {
+        display: initial;
     }
 }

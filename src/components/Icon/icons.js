@@ -14,6 +14,7 @@ const icons = {
     minus: require("react-icons/fa")["FaMinus"],
     location: require("react-icons/fa6")["FaLocationDot"],
     domain: require("react-icons/md")["MdDomain"],
-}
+    menu: require("react-icons/tfi")["TfiMenu"],
+};
 
 export default icons;

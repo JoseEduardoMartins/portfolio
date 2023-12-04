@@ -1,14 +1,26 @@
 import Translator from "../I18n/Translator";
 import TranslateOptions from "../I18n/TranslateOptions";
+import Icon from "../Icon";
 import style from "./Header.module.css";
 
 const Header = () => {
+    const handleMenu = () => {
+        const element = document.getElementById("menu");
+
+        const value = window.getComputedStyle(element).display;
+
+        element.style.display = value === "none" ? "flex" : "none";
+    };
+
     return (
         <header className={style.header}>
             <a className={style.logo} href="/#">
                 José Eduardo Martins
             </a>
-            <nav className={style.menu}>
+            <div className={style.burger} onClick={handleMenu}>
+                <Icon>menu</Icon>
+            </div>
+            <nav id="menu" className={style.menu}>
                 <a className={style.menu_link} href="#about">
                     <Translator path="header.about" />
                 </a>
