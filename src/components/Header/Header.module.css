@@ -12,47 +12,7 @@
 }
 
 .logo {
+    font-weight: bold;
     font-size: 25px;
     color: var(--second-color);
-}
-
-.logo,
-.menu_link {
-    font-weight: bold;
-}
-
-.menu {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.burger {
-    display: none;
-    cursor: pointer;
-}
-
-.menu_link {
-    font-size: 17px;
-    color: var(--third-color);
-}
-
-.menu_link:hover {
-    color: var(--second-color);
-}
-
-@media only screen and (max-width: 900px) {
-    .menu {
-        display: none;
-        position: absolute;
-        top: 70px;
-        right: 0px;
-        flex-direction: column;
-        padding: 20px 50px 50px;
-        background-color: var(--first-color);
-        opacity: 1;
-    }
-    .burger {
-        display: initial;
-    }
 }
