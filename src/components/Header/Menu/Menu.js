@@ -4,7 +4,7 @@ import TranslateOptions from "../../I18n/TranslateOptions";
 import Icon from "../../Icon";
 import style from "./Menu.module.css";
 
-const DropdownMenu = () => {
+const Menu = () => {
     const dropdownRef = useRef(null);
     const [isActive, setIsActive] = useState(false);
 
@@ -74,4 +74,4 @@ const DropdownMenu = () => {
     );
 };
 
-export default DropdownMenu;
+export default Menu;
