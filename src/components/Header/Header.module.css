@@ -9,6 +9,7 @@
     padding: 0px 40px;
     background-color: var(--first-color);
     opacity: 0.9;
+    z-index: 1;
 }
 
 .logo {
