@@ -10,7 +10,10 @@ const TranslateOptions = () => {
     const { i18n, t } = useTranslation();
     const [selectedLanguage, setSelectedLanguage] = useState();
 
-    const handleChangeLanguage = (language) => i18n.changeLanguage(language);
+    const handleChangeLanguage = (language) => {
+        i18n.changeLanguage(language);
+        setSelectedLanguage(i18n.language);
+    };
 
     useLayoutEffect(() => {
         setSelectedLanguage(i18n.language);
