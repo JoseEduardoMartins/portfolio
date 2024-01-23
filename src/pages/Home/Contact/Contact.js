@@ -11,7 +11,7 @@ import config from "../../../config";
 const Contact = () => {
     const handleClick = () =>
         window.open(
-            `${config.whatsapp.url}${config.whatsapp.phone}?text=Olá%José%Eduardo,%podemos%conversar%sobre%um%projeto?`,
+            `${config.whatsapp.url}${config.whatsapp.phone}?text=Olá Eduardo Martins, podemos conversar sobre um projeto?`,
             "_blank"
         );
 
