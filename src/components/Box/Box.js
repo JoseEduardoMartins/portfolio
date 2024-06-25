@@ -5,12 +5,12 @@ const Box = ({ order, justify, color, size, onClick, children }) => (
     <div
         onClick={onClick}
         className={`
-      ${style.box}
-      ${style["order_" + order]}
-      ${style["justify_" + justify]}
-      ${style["color_" + color]}
-      ${style["size_" + size]}
-    `}
+            ${style.box}
+            ${style["order_" + order]}
+            ${style["justify_" + justify]}
+            ${style["color_" + color]}
+            ${style["size_" + size]}
+        `}
     >
         {children}
     </div>

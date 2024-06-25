@@ -1,0 +1,14 @@
+.skil {
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.theme_primary {
+    color: var(--second-color);
+    background-color: var(--fifth-color);
+}
+
+.theme_secondary {
+    color: var(--second-color);
+    background-color: var(--first-color);
+}

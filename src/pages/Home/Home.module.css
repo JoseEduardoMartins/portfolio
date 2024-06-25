@@ -1,6 +1,6 @@
 .home {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
 }

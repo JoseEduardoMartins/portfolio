@@ -1,9 +1,8 @@
 import Translator from "../../../components/I18n/Translator";
-import Section from "../../../components/Section";
-import Subtitle from "../../../components/Subtitle";
 import List from "../../../components/List";
-import Text from "../../../components/Text";
-import Skil from "./Skil";
+import Section from "../../../components/Section";
+import Skil from "../../../components/Skil";
+import Subtitle from "../../../components/Subtitle";
 
 const skils = [
     { key: 1, value: "JavaScript" },
@@ -34,8 +33,8 @@ const Skils = () => (
         </Subtitle>
         <List flexWrap="wrap">
             {skils?.map((skil) => (
-                <Skil key={skil.key}>
-                    <Text>{skil.value}</Text>
+                <Skil key={skil.key} theme="primary">
+                    {skil.value}
                 </Skil>
             ))}
         </List>
