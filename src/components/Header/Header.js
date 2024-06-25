@@ -9,4 +9,5 @@ const Header = () => (
         <Menu />
     </header>
 );
+
 export default Header;

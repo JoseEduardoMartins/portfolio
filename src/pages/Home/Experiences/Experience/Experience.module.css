@@ -1,16 +1,21 @@
 .header {
-  display: flex;
-  gap: 30px;
+    display: flex;
+    gap: 30px;
 }
 
-.header_data{
-  display: flex;
-  align-items: center;
+.header_data {
+    display: flex;
+    align-items: center;
+}
+
+.description {
+    text-indent: 20px;
+    text-align: justify;
 }
 
 .footer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  color: var(--second-color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: var(--second-color);
 }

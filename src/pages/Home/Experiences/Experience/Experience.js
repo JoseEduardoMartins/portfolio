@@ -1,6 +1,6 @@
 import { useState, useLayoutEffect } from "react";
 import Box from "../../../../components/Box";
-import Skil from "../../Skils/Skil";
+import Skil from "../../../../components/Skil";
 import Icon from "../../../../components/Icon";
 import style from "./Experience.module.css";
 
@@ -51,10 +51,15 @@ const Experience = ({ experience, changeExperience }) => {
                         </div>
                     </header>
 
-                    <div>{experience.description}</div>
+                    <div className={style.description}>
+                        {experience.description}
+                    </div>
                     <footer className={style.footer}>
-                        {experience.skils.map((skil, index) => (
-                            <Skil key={index}>{skil.value}</Skil>
+                        {experience.skils.map((skil) => (
+                            <Skil key={skil.key} theme="primary">
+                                {skil.value}
+                            </Skil>
+
                         ))}
                     </footer>
                 </Box>
