@@ -1,22 +1,20 @@
-import Introduction from "./Introduction";
 import About from "./About";
+import Contact from "./Contact";
 import Experiences from "./Experiences";
+import style from "./Home.module.css";
+import Introduction from "./Introduction";
 import Repositories from "./Repositories";
 import Skils from "./Skils";
-import Contact from "./Contact";
-import style from "./Home.module.css";
 
-const Home = () => {
-    return (
-        <div className={style.home}>
-            <Introduction />
-            <About />
-            <Experiences />
-            <Repositories />
-            <Skils />
-            <Contact />
-        </div>
-    );
-};
+const Home = () => (
+    <div className={style.home}>
+        <Introduction />
+        <About />
+        <Experiences />
+        <Repositories />
+        <Skils />
+        <Contact />
+    </div>
+);
 
 export default Home;
