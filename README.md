@@ -9,8 +9,6 @@ Este é o repositório do meu portfólio pessoal, desenvolvido com React. O proj
 
 ## Instruções de Configuração
 
-## Instruções de Configuração
-
 ### 1. Clone o repositório
 
 ```bash
