@@ -28,3 +28,7 @@
 .link_secondary:hover {
     color: var(--second-color);
 }
+
+.hidden {
+    visibility: hidden;
+}

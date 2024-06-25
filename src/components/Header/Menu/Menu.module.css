@@ -1,0 +1,46 @@
+.burger {
+    cursor: pointer;
+}
+
+.dropdown_conteiner {
+    display: none;
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 50px 50px;
+    background-color: var(--first-color);
+    opacity: 1;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.link {
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--third-color);
+}
+
+.link:hover {
+    color: var(--second-color);
+}
+
+@media only screen and (max-width: 1000px) {
+    .dropdown_conteiner {
+        display: flex;
+    }
+
+    .normal_conteiner {
+        display: none;
+    }
+}

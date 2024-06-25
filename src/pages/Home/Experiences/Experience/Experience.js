@@ -59,6 +59,7 @@ const Experience = ({ experience, changeExperience }) => {
                             <Skil key={skil.key} theme="primary">
                                 {skil.value}
                             </Skil>
+
                         ))}
                     </footer>
                 </Box>
