@@ -1,4 +1,4 @@
-# Portfolio System - Front-end
+# Portfolio - Front-end
 
 Este é o repositório do meu portfólio pessoal, desenvolvido com React. O projeto é multilíngue, oferecendo suporte para diferentes idiomas, e utiliza a API do GitHub para listar meus repositórios.
 
