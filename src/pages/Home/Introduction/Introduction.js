@@ -6,26 +6,24 @@ import Button from "../../../components/Button/Button";
 import resume from "../../../assets/profile.pdf";
 import style from "./Introduction.module.css";
 
-const Introduction = () => {
-    return (
-        <Section>
-            <div className={style.introduction}>
-                <Text>
-                    <Translator path="home.introduction.hi" />
-                </Text>
-                <Title color="secondary">José Eduardo Martins</Title>
-                <Title color="tertiary">
-                    <Translator path="home.introduction.developer" />
-                </Title>
-                <Text color="secondary">
-                    <Translator path="home.introduction.description" />
-                </Text>
-                <Button href={resume} size="small">
-                    <Translator path="home.introduction.resume" />
-                </Button>
-            </div>
-        </Section>
-    );
-};
+const Introduction = () => (
+    <Section>
+        <div className={style.introduction}>
+            <Text>
+                <Translator path="home.introduction.hi" />
+            </Text>
+            <Title color="secondary">José Eduardo Martins</Title>
+            <Title color="tertiary">
+                <Translator path="home.introduction.developer" />
+            </Title>
+            <Text color="secondary">
+                <Translator path="home.introduction.description" />
+            </Text>
+            <Button href={resume} size="small">
+                <Translator path="home.introduction.resume" />
+            </Button>
+        </div>
+    </Section>
+);
 
 export default Introduction;
