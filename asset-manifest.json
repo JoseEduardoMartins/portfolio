@@ -1,17 +1,19 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.c40f2238.css",
-    "main.js": "/portfolio/static/js/main.52126eab.js",
-    "static/media/profile.pdf": "/portfolio/static/media/profile.72e3d8c8ddc8e3b68c14.pdf",
+    "main.js": "/portfolio/static/js/main.b5df8acf.js",
+    "static/media/resume-portuguese.pdf": "/portfolio/static/media/resume-portuguese.82466db927dd35bfeb89.pdf",
+    "static/media/resume-spanish.pdf": "/portfolio/static/media/resume-spanish.1df8da566f96b423188f.pdf",
+    "static/media/resume-english.pdf": "/portfolio/static/media/resume-english.56d1fd28ca9c1113207d.pdf",
     "static/media/eua-flag.svg": "/portfolio/static/media/eua-flag.b4cf5f242457938f230beb91690ad5df.svg",
     "static/media/spain-flag.svg": "/portfolio/static/media/spain-flag.a18477e2c08676f643e22a5a87e4367d.svg",
     "static/media/brasil-flag.svg": "/portfolio/static/media/brasil-flag.80895c4e73db7a5abdff2cbe55cc7f60.svg",
     "index.html": "/portfolio/index.html",
     "main.c40f2238.css.map": "/portfolio/static/css/main.c40f2238.css.map",
-    "main.52126eab.js.map": "/portfolio/static/js/main.52126eab.js.map"
+    "main.b5df8acf.js.map": "/portfolio/static/js/main.b5df8acf.js.map"
   },
   "entrypoints": [
     "static/css/main.c40f2238.css",
-    "static/js/main.52126eab.js"
+    "static/js/main.b5df8acf.js"
   ]
 }
