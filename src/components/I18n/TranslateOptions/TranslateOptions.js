@@ -1,9 +1,7 @@
 import React, { useState, useLayoutEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Flag from "../Flag";
-import BrasilFlag from "../../../assets/brasil-flag.svg";
-import EuaFlag from "../../../assets/eua-flag.svg";
-import SpainFlag from "../../../assets/spain-flag.svg";
+import { BrasilFlag, EuaFlag, SpainFlag } from "../../../assets/flags";
 import style from "./TranslateOptions.module.css";
 
 const TranslateOptions = () => {
