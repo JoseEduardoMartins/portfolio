@@ -26,7 +26,7 @@ const Experience = ({ experience, changeExperience }) => {
                     {experience.start_date.month} {experience.start_date.year} -{" "}
                     {experience.isWorking
                         ? "Present"
-                        : `${experience.start_date.month} ${experience.start_date.year}`}
+                        : `${experience.end_date.month} ${experience.end_date.year}`}
                 </div>
                 <Icon size="small" style={{ cursor: "pointer" }}>
                     {isOpen ? "minus" : "plus"}
@@ -59,7 +59,6 @@ const Experience = ({ experience, changeExperience }) => {
                             <Skil key={skil.key} theme="primary">
                                 {skil.value}
                             </Skil>
-
                         ))}
                     </footer>
                 </Box>
