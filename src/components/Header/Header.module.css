@@ -1,19 +1,50 @@
 .header {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 40px;
-    background-color: var(--first-color);
-    opacity: 0.9;
-    z-index: 1;
+    padding: 0 clamp(20px, 5vw, 48px);
+    background: rgba(10, 15, 30, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    z-index: 50;
 }
 
 .logo {
-    font-weight: bold;
-    font-size: 25px;
-    color: var(--second-color);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--bg);
+    background: var(--gradient);
+    border-radius: 11px;
+    letter-spacing: -0.02em;
+}
+
+.logoText {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text);
+}
+
+@media only screen and (max-width: 600px) {
+    .logoText {
+        display: none;
+    }
 }
