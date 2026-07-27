@@ -1,0 +1,90 @@
+// Skills grouped by category. `labelKey` is translated via i18n;
+// `icon` maps to an entry in components/Icon/icons.js.
+
+const skillGroups = [
+    {
+        id: "frontend",
+        icon: "code",
+        labelKey: "home.skils.groups.frontend",
+        items: [
+            "JavaScript",
+            "TypeScript",
+            "React.js",
+            "Next.js",
+            "Single-SPA",
+            "Module Federation",
+            "Webpack",
+            "Vite",
+            "React Query",
+            "React Hook Form",
+            "Zod",
+            "HTML5",
+            "CSS3",
+            "Tailwind CSS",
+            "Styled Components",
+            "Storybook",
+        ],
+    },
+    {
+        id: "backend",
+        icon: "server",
+        labelKey: "home.skils.groups.backend",
+        items: [
+            "Node.js",
+            "Express.js",
+            "Nest.js",
+            "BFF",
+            "Microservices",
+            "API REST",
+            "TypeORM",
+            "Class Validator",
+            "Swagger",
+            "RabbitMQ",
+        ],
+    },
+    {
+        id: "devops",
+        icon: "cloud",
+        labelKey: "home.skils.groups.devops",
+        items: [
+            "Docker",
+            "CI/CD",
+            "GitHub Actions",
+            "GitLab CI",
+            "Jenkins",
+            "AWS",
+            "Linux",
+            "Nginx",
+            "PM2",
+            "Git",
+        ],
+    },
+    {
+        id: "databases",
+        icon: "database",
+        labelKey: "home.skils.groups.databases",
+        items: [
+            "PostgreSQL",
+            "MySQL",
+            "MariaDB",
+            "SQL Server",
+            "MongoDB",
+            "Oracle",
+        ],
+    },
+    {
+        id: "testing",
+        icon: "flask",
+        labelKey: "home.skils.groups.testing",
+        items: [
+            "Jest",
+            "Vitest",
+            "React Testing Library",
+            "E2E",
+            "ESLint",
+            "Prettier",
+        ],
+    },
+];
+
+export default skillGroups;
