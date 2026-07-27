@@ -1,9 +1,49 @@
 :root {
-    --first-color: #0a192f;
-    --second-color: #46b7a5;
-    --third-color: #cdd8ef;
-    --fourth-color: #8a9bbb;
-    --fifth-color: #112240;
-    --sixth-color: #4bb3a2a6;
-    --seventh-color: #4bb3a2d7;
+    /* ---- Base / surfaces ---- */
+    --bg: #0a0f1e;
+    --bg-elevated: #0d1426;
+    --surface: #111a2e;
+    --surface-2: #16213b;
+    --surface-3: #1c2a47;
+    --border: rgba(148, 163, 184, 0.14);
+    --border-strong: rgba(148, 163, 184, 0.3);
+
+    /* ---- Text ---- */
+    --text: #e6edf7;
+    --text-muted: #93a4c3;
+    --text-dim: #64748b;
+
+    /* ---- Accent ---- */
+    --accent: #2dd4bf;
+    --accent-2: #38bdf8;
+    --accent-3: #818cf8;
+    --accent-soft: rgba(45, 212, 191, 0.12);
+    --accent-softer: rgba(45, 212, 191, 0.06);
+    --gradient: linear-gradient(120deg, #2dd4bf 0%, #38bdf8 45%, #818cf8 100%);
+    --gradient-soft: linear-gradient(
+        120deg,
+        rgba(45, 212, 191, 0.16),
+        rgba(129, 140, 248, 0.16)
+    );
+
+    /* ---- Effects ---- */
+    --shadow: 0 24px 50px -24px rgba(2, 6, 23, 0.8);
+    --shadow-glow: 0 0 0 1px var(--border), 0 20px 40px -24px rgba(45, 212, 191, 0.25);
+    --radius: 16px;
+    --radius-sm: 10px;
+    --radius-lg: 24px;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+    /* ---- Fonts ---- */
+    --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+    --font-body: "Inter", system-ui, -apple-system, sans-serif;
+
+    /* ---- Legacy aliases (keep older components working) ---- */
+    --first-color: var(--bg);
+    --second-color: var(--accent);
+    --third-color: var(--text);
+    --fourth-color: var(--text-muted);
+    --fifth-color: var(--surface-2);
+    --sixth-color: rgba(45, 212, 191, 0.65);
+    --seventh-color: var(--surface);
 }

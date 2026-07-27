@@ -1,46 +1,87 @@
-.burger {
-    cursor: pointer;
-}
-
-.dropdown_conteiner {
-    display: none;
-}
-
-.dropdownMenu {
-    position: absolute;
-    top: 70px;
-    right: 0px;
+.desktop {
     display: flex;
     align-items: center;
-    flex-direction: column;
-    gap: 30px;
-    padding: 20px 50px 50px;
-    background-color: var(--first-color);
-    opacity: 1;
-}
-
-.menu {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+    gap: 28px;
 }
 
 .link {
-    font-size: 17px;
-    font-weight: bold;
-    color: var(--third-color);
+    position: relative;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: color 0.2s var(--ease);
+}
+
+.link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--accent);
+    transition: width 0.25s var(--ease);
 }
 
 .link:hover {
-    color: var(--second-color);
+    color: var(--text);
 }
 
-@media only screen and (max-width: 1000px) {
-    .dropdown_conteiner {
-        display: flex;
-    }
+.active {
+    color: var(--accent);
+}
 
-    .normal_conteiner {
+.active::after {
+    width: 100%;
+}
+
+/* ---- Mobile ---- */
+.mobile {
+    display: none;
+    position: relative;
+}
+
+.burger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    top: 54px;
+    right: 0;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 22px 24px;
+    background: rgba(13, 20, 38, 0.96);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.dropdownLang {
+    padding-top: 6px;
+    border-top: 1px solid var(--border);
+}
+
+@media only screen and (max-width: 860px) {
+    .desktop {
         display: none;
+    }
+    .mobile {
+        display: flex;
     }
 }
