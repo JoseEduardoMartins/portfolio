@@ -1,0 +1,39 @@
+.section {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 96px 24px;
+    scroll-margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background: linear-gradient(
+        to bottom,
+        var(--accent),
+        var(--border) 60%,
+        transparent
+    );
+}
+
+@media only screen and (max-width: 560px) {
+    .timeline {
+        padding-left: 22px;
+    }
+}

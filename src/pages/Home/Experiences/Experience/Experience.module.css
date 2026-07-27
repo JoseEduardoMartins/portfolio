@@ -1,21 +1,178 @@
-.header {
-    display: flex;
-    gap: 30px;
+.item {
+    position: relative;
 }
 
-.header_data {
+.node {
+    position: absolute;
+    left: -30px;
+    top: 26px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-softer);
+    z-index: 1;
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px 24px;
+    cursor: pointer;
+    transition: border-color 0.25s var(--ease), transform 0.25s var(--ease),
+        box-shadow 0.25s var(--ease);
+}
+
+.card:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-2px);
+}
+
+.card.open {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-glow);
+}
+
+.head {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.headMain {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.role {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.company {
+    display: inline-flex;
     align-items: center;
+    gap: 8px;
+    color: var(--accent);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.company svg {
+    width: 16px;
+    height: 16px;
+}
+
+.badge {
+    padding: 3px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 999px;
+}
+
+.toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    color: var(--text-muted);
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.card.open .toggle,
+.toggle:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    margin-top: 14px;
+}
+
+.metaItem {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+    font-size: 13.5px;
+}
+
+.metaItem svg {
+    width: 15px;
+    height: 15px;
+    color: var(--text-dim);
+}
+
+.dim {
+    color: var(--text-dim);
+}
+
+.chip {
+    padding: 2px 9px;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--text-muted);
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+}
+
+.body {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .description {
-    text-indent: 20px;
-    text-align: justify;
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.7;
 }
 
-.footer {
+.stack {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    color: var(--second-color);
+    gap: 8px;
+}
+
+.tech {
+    padding: 5px 12px;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--accent);
+    background: var(--accent-softer);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+@media only screen and (max-width: 560px) {
+    .node {
+        left: -22px;
+    }
+    .card {
+        padding: 18px;
+    }
 }
