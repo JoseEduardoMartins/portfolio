@@ -1,0 +1,131 @@
+.section {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 96px 24px;
+    scroll-margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.text p {
+    color: var(--text-muted);
+    font-size: 16.5px;
+    line-height: 1.75;
+}
+
+.stats {
+    display: flex;
+    gap: 14px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    flex: 1;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 18px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+}
+
+.statValue {
+    font-family: var(--font-display);
+    font-size: 30px;
+    font-weight: 700;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.statLabel {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 26px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.cardGlow {
+    position: absolute;
+    top: -40%;
+    right: -30%;
+    width: 220px;
+    height: 220px;
+    background: var(--gradient);
+    filter: blur(70px);
+    opacity: 0.16;
+    pointer-events: none;
+}
+
+.cardTitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--text);
+}
+
+.cardTitle svg {
+    color: var(--accent);
+}
+
+.facts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.fact {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.fact svg {
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 5px;
+    width: 12px;
+    height: 12px;
+}
+
+@media only screen and (max-width: 800px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
