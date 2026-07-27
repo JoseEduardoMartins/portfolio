@@ -15,6 +15,23 @@ const icons = {
     location: require("react-icons/fa6")["FaLocationDot"],
     domain: require("react-icons/md")["MdDomain"],
     menu: require("react-icons/tfi")["TfiMenu"],
+    close: require("react-icons/io5")["IoClose"],
+    download: require("react-icons/lu")["LuDownload"],
+    arrow: require("react-icons/lu")["LuArrowRight"],
+    arrowUpRight: require("react-icons/lu")["LuArrowUpRight"],
+    email: require("react-icons/lu")["LuMail"],
+    briefcase: require("react-icons/lu")["LuBriefcase"],
+    education: require("react-icons/lu")["LuGraduationCap"],
+    calendar: require("react-icons/lu")["LuCalendarDays"],
+    code: require("react-icons/lu")["LuCode"],
+    layers: require("react-icons/lu")["LuLayers"],
+    server: require("react-icons/lu")["LuServer"],
+    cloud: require("react-icons/lu")["LuCloud"],
+    database: require("react-icons/lu")["LuDatabase"],
+    flask: require("react-icons/lu")["LuFlaskConical"],
+    wrench: require("react-icons/lu")["LuWrench"],
+    sparkles: require("react-icons/lu")["LuStars"],
+    dot: require("react-icons/go")["GoDotFill"],
 };
 
 export default icons;
