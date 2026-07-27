@@ -1,0 +1,87 @@
+.section {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 96px 24px;
+    scroll-margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: border-color 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+.group:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-3px);
+}
+
+.groupHead {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.groupIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+}
+
+.groupTitle {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chip {
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: color 0.2s var(--ease), border-color 0.2s var(--ease),
+        background 0.2s var(--ease);
+}
+
+.chip:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-softer);
+}
+
+@media only screen and (max-width: 720px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
