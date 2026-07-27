@@ -1,13 +1,17 @@
 body::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
 }
 
 body::-webkit-scrollbar-track {
-    background: var(--first-color);
+    background: var(--bg);
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: var(--fourth-color);
+    background-color: var(--surface-3);
     border-radius: 20px;
-    border: 3px solid var(--first-color);
+    border: 2px solid var(--bg);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--accent);
 }

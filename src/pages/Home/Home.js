@@ -1,5 +1,6 @@
 import About from "./About";
 import Contact from "./Contact";
+import Education from "./Education";
 import Experiences from "./Experiences";
 import style from "./Home.module.css";
 import Introduction from "./Introduction";
@@ -11,8 +12,9 @@ const Home = () => (
         <Introduction />
         <About />
         <Experiences />
-        <Repositories />
         <Skils />
+        <Education />
+        <Repositories />
         <Contact />
     </div>
 );

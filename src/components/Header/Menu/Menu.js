@@ -1,74 +1,84 @@
-import React, { useState, useLayoutEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Translator from "../../I18n/Translator";
 import TranslateOptions from "../../I18n/TranslateOptions";
 import Icon from "../../Icon";
+import useActiveSection from "../../../hooks/useActiveSection";
 import style from "./Menu.module.css";
+
+const navItems = [
+    { id: "about", path: "header.about" },
+    { id: "experiences", path: "header.experiences" },
+    { id: "skils", path: "header.skills" },
+    { id: "repositories", path: "header.repositories" },
+    { id: "contact", path: "header.contact" },
+];
+
+const sectionIds = [
+    "home",
+    "about",
+    "experiences",
+    "skils",
+    "education",
+    "repositories",
+    "contact",
+];
 
 const Menu = () => {
     const dropdownRef = useRef(null);
     const [isActive, setIsActive] = useState(false);
+    const active = useActiveSection(sectionIds);
 
-    const onClick = () => setIsActive(!isActive);
-
-    useLayoutEffect(() => {
-        const pageClickEvent = (e) => {
+    useEffect(() => {
+        const handleClickOutside = (event) => {
             if (
-                dropdownRef.current !== null &&
-                !dropdownRef.current.contains(e.target)
+                dropdownRef.current &&
+                !dropdownRef.current.contains(event.target)
             ) {
-                setIsActive(!isActive);
+                setIsActive(false);
             }
         };
-
-        if (isActive) {
-            window.addEventListener("click", pageClickEvent);
-        }
-
-        return () => {
-            window.removeEventListener("click", pageClickEvent);
-        };
+        if (isActive) window.addEventListener("click", handleClickOutside);
+        return () => window.removeEventListener("click", handleClickOutside);
     }, [isActive]);
+
+    const renderLinks = (onClick) =>
+        navItems.map((item) => (
+            <a
+                key={item.id}
+                className={`${style.link} ${
+                    active === item.id ? style.active : ""
+                }`}
+                href={`#${item.id}`}
+                onClick={onClick}
+            >
+                <Translator path={item.path} />
+            </a>
+        ));
 
     return (
         <>
-            <div className={style.dropdown_conteiner} ref={dropdownRef}>
-                <div onClick={onClick} className={style.burger}>
-                    <Icon>menu</Icon>
-                </div>
+            <nav className={style.desktop}>
+                {renderLinks()}
+                <TranslateOptions />
+            </nav>
+
+            <div className={style.mobile} ref={dropdownRef}>
+                <button
+                    onClick={() => setIsActive((prev) => !prev)}
+                    className={style.burger}
+                    aria-label="menu"
+                    type="button"
+                >
+                    <Icon size="small">{isActive ? "close" : "menu"}</Icon>
+                </button>
                 {isActive && (
-                    <nav className={style.dropdownMenu}>
-                        <a className={style.link} href="#about">
-                            <Translator path="header.about" />
-                        </a>
-                        <a className={style.link} href="#experiences">
-                            <Translator path="header.experiences" />
-                        </a>
-                        <a className={style.link} href="#repositories">
-                            <Translator path="header.repositories" />
-                        </a>
-                        <a className={style.link} href="#contact">
-                            <Translator path="header.contact" />
-                        </a>
-                        <TranslateOptions />
+                    <nav className={style.dropdown}>
+                        {renderLinks(() => setIsActive(false))}
+                        <div className={style.dropdownLang}>
+                            <TranslateOptions />
+                        </div>
                     </nav>
                 )}
-            </div>
-            <div className={style.normal_conteiner}>
-                <nav className={style.menu}>
-                    <a className={style.link} href="#about">
-                        <Translator path="header.about" />
-                    </a>
-                    <a className={style.link} href="#experiences">
-                        <Translator path="header.experiences" />
-                    </a>
-                    <a className={style.link} href="#repositories">
-                        <Translator path="header.repositories" />
-                    </a>
-                    <a className={style.link} href="#contact">
-                        <Translator path="header.contact" />
-                    </a>
-                    <TranslateOptions />
-                </nav>
             </div>
         </>
     );
