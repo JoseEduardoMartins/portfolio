@@ -1,0 +1,82 @@
+.section {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 96px 24px;
+    scroll-margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.card {
+    display: flex;
+    gap: 16px;
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: border-color 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+.card:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-3px);
+}
+
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.institution {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.course {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.55;
+}
+
+.period {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-dim);
+}
+
+.period svg {
+    width: 15px;
+    height: 15px;
+}
+
+@media only screen and (max-width: 720px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
