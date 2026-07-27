@@ -1,41 +1,109 @@
-.repository_header {
+.card {
     display: flex;
+    flex-direction: column;
+    gap: 14px;
+    height: 100%;
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: border-color 0.25s var(--ease), transform 0.25s var(--ease),
+        box-shadow 0.25s var(--ease);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: var(--shadow);
+}
+
+.top {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
-.repository_header_title {
+.folder {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+}
+
+.external {
+    display: inline-flex;
+    color: var(--text-dim);
+    transition: color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+
+.card:hover .external {
+    color: var(--accent);
+    transform: translate(2px, -2px);
+}
+
+.name {
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text);
+    transition: color 0.2s var(--ease);
+}
+
+.name:hover {
+    color: var(--accent);
+}
+
+.description {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+.topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.topic {
+    padding: 3px 9px;
+    font-size: 11.5px;
+    font-weight: 500;
+    color: var(--accent);
+    background: var(--accent-softer);
+    border-radius: 6px;
+}
+
+.footer {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
 }
 
-.repository_body {
-    text-indent: 20px;
-    text-align: justify;
-}
-
-.repository_footer {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.repository_footer_counts {
-    display: flex;
-    gap: 10px;
-}
-
-.repository_footer_count {
-    display: flex;
+.meta {
+    display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 7px;
+    font-size: 13px;
+    color: var(--text-muted);
 }
 
-@media only screen and (max-width: 700px) {
-    .repository_footer_counts {
-        gap: 20px;
-    }
-    .repository_footer_count_label {
-        display: none;
-    }
+.meta svg {
+    width: 14px;
+    height: 14px;
+    color: var(--text-dim);
+}
+
+.dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
 }

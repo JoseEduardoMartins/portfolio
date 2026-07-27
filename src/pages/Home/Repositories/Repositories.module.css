@@ -1,0 +1,67 @@
+.section {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 96px 24px;
+    scroll-margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.toggle,
+.ghLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s var(--ease), border-color 0.2s var(--ease),
+        color 0.2s var(--ease);
+}
+
+.toggle {
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+}
+
+.toggle:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.ghLink {
+    color: var(--bg);
+    background: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.ghLink:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px -12px rgba(45, 212, 191, 0.6);
+}
+
+@media only screen and (max-width: 720px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

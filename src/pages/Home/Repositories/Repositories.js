@@ -1,75 +1,93 @@
 import { useState, useEffect } from "react";
-import Translator from "../../../components/I18n/Translator";
+import { useTranslation } from "react-i18next";
 import { getAll } from "./Repositories.service";
-import Section from "../../../components/Section";
-import Subtitle from "../../../components/Subtitle";
-import List from "../../../components/List";
-import Button from "../../../components/Button";
-import Project from "./Repository";
+import SectionHeader from "../../../components/SectionHeader";
+import Reveal from "../../../components/Reveal";
+import Icon from "../../../components/Icon";
+import config from "../../../config";
+import Repository from "./Repository";
+import style from "./Repositories.module.css";
+
+const INITIAL_LIMIT = 6;
 
 const Repositories = () => {
-    const [limit, setLimit] = useState(3);
-
-    const [repository, setRepository] = useState([]);
-    const [repositoryTable, setRepositoryTable] = useState([]);
-
-    const setDataPagination = (data, limit) => {
-        const newData = [...data];
-
-        const limitNumber = newData.length > limit ? limit : newData.length;
-        const response = newData.splice(0, limitNumber);
-
-        setRepositoryTable(response);
-        setLimit(limitNumber);
-    };
-
-    const loadRepository = async () => {
-        try {
-            const response = await getAll();
-            setRepository(response);
-            setDataPagination(response, limit);
-        } catch (error) {
-            console.log(error);
-        }
-    };
+    const { t } = useTranslation();
+    const [repositories, setRepositories] = useState([]);
+    const [expanded, setExpanded] = useState(false);
 
     useEffect(() => {
-        loadRepository();
-        // eslint-disable-next-line
+        const load = async () => {
+            try {
+                const response = await getAll();
+                const cleaned = response
+                    .filter(
+                        (repo) =>
+                            !repo.fork &&
+                            repo.name.toLowerCase() !==
+                                config.github.name.toLowerCase()
+                    )
+                    .sort(
+                        (a, b) =>
+                            b.stargazers_count - a.stargazers_count ||
+                            new Date(b.pushed_at) - new Date(a.pushed_at)
+                    );
+                setRepositories(cleaned);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+        load();
     }, []);
 
+    const visible = expanded
+        ? repositories
+        : repositories.slice(0, INITIAL_LIMIT);
+    const hasMore = repositories.length > INITIAL_LIMIT;
+
     return (
-        <Section id="repositories">
-            <Subtitle>
-                <Translator path="home.repositorie.title" />
-                <span>{repository.length}</span>
-            </Subtitle>
-            <List gap="20" direction="column">
-                {repositoryTable?.map((repository) => (
-                    <Project key={repository.id} repository={repository} />
+        <section id="repositories" className={style.section}>
+            <SectionHeader
+                index="05"
+                eyebrow={t("home.repositorie.title")}
+                title={t("home.repositorie.heading")}
+            />
+
+            <div className={style.grid}>
+                {visible.map((repository, index) => (
+                    <Repository
+                        key={repository.id}
+                        repository={repository}
+                        delay={(index % INITIAL_LIMIT) * 60}
+                    />
                 ))}
+            </div>
 
-                {repositoryTable.length !== repository.length && (
-                    <Button
-                        size="small"
-                        onClick={() =>
-                            setDataPagination(repository, repository.length)
-                        }
+            {hasMore && (
+                <Reveal className={style.actions}>
+                    <button
+                        className={style.toggle}
+                        type="button"
+                        onClick={() => setExpanded((prev) => !prev)}
                     >
-                        <Translator path="home.repositorie.showMore" />
-                    </Button>
-                )}
-
-                {repositoryTable.length === repository.length && (
-                    <Button
-                        size="small"
-                        onClick={() => setDataPagination(repository, 3)}
+                        {expanded
+                            ? t("home.repositorie.showLess")
+                            : t("home.repositorie.showMore")}
+                        <Icon size="small">
+                            {expanded ? "minus" : "plus"}
+                        </Icon>
+                    </button>
+                    <a
+                        className={style.ghLink}
+                        href={`${config.github.url}${config.github.name}`}
+                        target="_blank"
+                        rel="noreferrer"
                     >
-                        <Translator path="home.repositorie.showLess" />
-                    </Button>
-                )}
-            </List>
-        </Section>
+                        <Icon size="small">github</Icon>
+                        {t("home.repositorie.viewGithub")}
+                    </a>
+                </Reveal>
+            )}
+        </section>
     );
 };
 
