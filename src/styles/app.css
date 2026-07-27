@@ -1,9 +1,61 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
 body {
-    background-color: var(--first-color);
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    /* subtle ambient glows */
+    background-image:
+        radial-gradient(
+            60rem 60rem at 80% -10%,
+            rgba(45, 212, 191, 0.1),
+            transparent 60%
+        ),
+        radial-gradient(
+            50rem 50rem at 0% 20%,
+            rgba(129, 140, 248, 0.1),
+            transparent 55%
+        );
+    background-attachment: fixed;
 }
 
 .app {
     width: 100%;
-    height: 100vh;
-    color: var(--third-color);
+    min-height: 100vh;
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+::selection {
+    background-color: var(--accent);
+    color: var(--bg);
+}
+
+/* ---- Scroll reveal ---- */
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+        opacity 0.7s var(--ease),
+        transform 0.7s var(--ease);
+    will-change: opacity, transform;
+}
+
+[data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    [data-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
 }
