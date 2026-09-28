@@ -1,20 +1,14 @@
-import { useLayoutEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Flag from "../Flag";
 import { BrasilFlag, EuaFlag, SpainFlag } from "../../../assets/flags";
 
 const TranslateOptions = () => {
   const { i18n, t } = useTranslation();
-  const [selectedLanguage, setSelectedLanguage] = useState<string>();
+  const selectedLanguage = i18n.language;
 
   const handleChangeLanguage = (language: string) => {
     i18n.changeLanguage(language);
-    setSelectedLanguage(i18n.language);
   };
-
-  useLayoutEffect(() => {
-    setSelectedLanguage(i18n.language);
-  }, [i18n.language]);
 
   return (
     <div className="flex flex-row items-center mx-2 gap-[5px]">

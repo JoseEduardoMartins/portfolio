@@ -10,5 +10,27 @@ export default defineConfig({
     globals: true,
     setupFiles: "./src/setupTests.ts",
     css: true,
+    coverage: {
+      provider: "v8",
+      reporter: ["text", "html", "lcov"],
+      include: ["src/**/*.{ts,tsx}"],
+      exclude: [
+        "src/**/*.d.ts",
+        "src/**/index.ts",
+        "src/main.tsx",
+        "src/vite-env.d.ts",
+        "src/setupTests.ts",
+        "src/i18n/**",
+        "src/assets/**",
+        "src/data/**",
+        "src/**/*.{test,spec}.{ts,tsx}",
+      ],
+      thresholds: {
+        statements: 40,
+        branches: 40,
+        functions: 40,
+        lines: 40,
+      },
+    },
   },
 });
