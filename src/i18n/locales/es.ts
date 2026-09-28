@@ -156,7 +156,7 @@ const es = {
             },
         },
         footer: {
-            copyright: "© 2026 José Eduardo Martins. Todos los derechos reservados.",
+            copyright: "© 2026 Eduardo Martins. Todos los derechos reservados.",
             built: "Hecho con React y mucho café.",
         },
     },

@@ -10,9 +10,7 @@ const Footer = () => {
     <footer className="w-full border-t border-border bg-bg-elevated">
       <div className="w-full max-w-[980px] mx-auto py-9 px-6 flex items-center justify-between gap-6 flex-wrap">
         <div className="flex items-center gap-3.5">
-          <span className="inline-flex items-center justify-center w-[42px] h-[42px] font-display text-sm font-bold text-bg bg-[image:var(--gradient)] rounded-[11px]">
-            JEM
-          </span>
+          <img src="/logo.svg" alt="" width="42" height="42" className="w-[42px] h-[42px]" />
           <div className="flex flex-col gap-0.5">
             <p className="text-sm text-text">
               <Translator path="footer.copyright" />
