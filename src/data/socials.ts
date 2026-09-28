@@ -1,6 +1,13 @@
 import config from "../config";
 
-const socials = [
+export interface Social {
+  id: string;
+  icon: string;
+  label: string;
+  href: string;
+}
+
+const socials: Social[] = [
     {
         id: "github",
         icon: "github",

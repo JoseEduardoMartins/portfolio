@@ -1,4 +1,12 @@
-const education = [
+export interface Education {
+  id: string;
+  institution: string;
+  courseKey: string;
+  start: string;
+  end: string;
+}
+
+const education: Education[] = [
     {
         id: "estacio",
         institution: "Estácio",

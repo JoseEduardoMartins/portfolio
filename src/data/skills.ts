@@ -1,7 +1,14 @@
 // Skills grouped by category. `labelKey` is translated via i18n;
 // `icon` maps to an entry in components/Icon/icons.js.
 
-const skillGroups = [
+export interface SkillGroup {
+  id: string;
+  icon: string;
+  labelKey: string;
+  items: string[];
+}
+
+const skillGroups: SkillGroup[] = [
     {
         id: "frontend",
         icon: "code",
