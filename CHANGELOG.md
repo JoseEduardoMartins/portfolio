@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/JoseEduardoMartins/portfolio/compare/v1.0.0...v1.1.0) (2026-09-28)
+
+
+### Features
+
+* reorganize portfolio into four routed pages and refine design ([218d49b](https://github.com/JoseEduardoMartins/portfolio/commit/218d49bcb5e54380ea552ae00acf001b48914134))
+
 # 1.0.0 (2026-09-28)
 
 
