@@ -1,4 +1,3 @@
-import { useLayoutEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Translator from "../../../components/I18n/Translator";
 import Icon from "../../../components/Icon";
@@ -14,13 +13,12 @@ const actionBase =
 
 const Introduction = () => {
   const { i18n } = useTranslation();
-  const [resume, setResume] = useState(resumePortuguese);
-
-  useLayoutEffect(() => {
-    if (i18n.language === "en-US") setResume(resumeEnglish);
-    else if (i18n.language === "es") setResume(resumeSpanish);
-    else setResume(resumePortuguese);
-  }, [i18n.language]);
+  const resume =
+    i18n.language === "en-US"
+      ? resumeEnglish
+      : i18n.language === "es"
+        ? resumeSpanish
+        : resumePortuguese;
 
   return (
     <section

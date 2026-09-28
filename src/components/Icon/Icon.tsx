@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode, useLayoutEffect, useState } from "react";
+import { ReactNode } from "react";
 import icons from "./icons";
 
 type IconSize = "small" | "medium" | "large";
@@ -28,26 +28,20 @@ const linkHoverClass: Record<IconColor, string> = {
 };
 
 const Icon = ({ type, size = "medium", color, children }: IconProps) => {
-  const [Component, setComponent] = useState<ReactElement>(<></>);
+  if (typeof children !== "string") return <></>;
 
-  useLayoutEffect(() => {
-    if (typeof children !== "string") return;
+  const NewComponent = icons[children];
+  if (!NewComponent) return <></>;
 
-    const NewComponent = icons[children];
-    if (!NewComponent) return;
+  const className = [
+    sizeClass[size],
+    type && color ? linkHoverClass[color] : "",
+    color ? colorClass[color] : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
 
-    const className = [
-      sizeClass[size],
-      type && color ? linkHoverClass[color] : "",
-      color ? colorClass[color] : "",
-    ]
-      .filter(Boolean)
-      .join(" ");
-
-    setComponent(<NewComponent className={className} />);
-  }, [children, type, size, color]);
-
-  return Component;
+  return <NewComponent className={className} />;
 };
 
 export default Icon;
