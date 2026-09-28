@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/JoseEduardoMartins/portfolio/compare/v1.1.0...v1.2.0) (2026-09-28)
+
+
+### Features
+
+* add brand SVG logo and use it as header/footer mark and favicon ([dc46f3e](https://github.com/JoseEduardoMartins/portfolio/commit/dc46f3e2642b0cce3c4999b7b45c799242a7ca4b))
+* regenerate PWA/iOS app icons and favicon fallback from brand logo ([f1e9c21](https://github.com/JoseEduardoMartins/portfolio/commit/f1e9c216d0f01a2b878f729105f4ef088c31a467))
+
 # [1.1.0](https://github.com/JoseEduardoMartins/portfolio/compare/v1.0.0...v1.1.0) (2026-09-28)
 
 
