@@ -45,8 +45,9 @@ const enUs = {
                     webOrder: "Online menu",
                 },
                 gallery: {
-                    landing: "Landing page — product overview",
-                    manager: "Management dashboard — operator sign-in",
+                    dashboard: "Reports dashboard — revenue and live KPIs",
+                    map: "Table map — real-time floor operations",
+                    products: "Product catalog — menu management",
                 },
             },
         },

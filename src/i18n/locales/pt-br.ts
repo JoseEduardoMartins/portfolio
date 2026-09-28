@@ -45,8 +45,9 @@ const ptBr = {
                     webOrder: "Cardápio online",
                 },
                 gallery: {
-                    landing: "Landing page — apresentação do produto",
-                    manager: "Painel de gestão — acesso do operador",
+                    dashboard: "Painel de relatórios — faturamento e indicadores em tempo real",
+                    map: "Mapa de mesas — status da operação do salão",
+                    products: "Catálogo de produtos — gestão do cardápio",
                 },
             },
         },

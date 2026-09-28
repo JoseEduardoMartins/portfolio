@@ -45,8 +45,9 @@ const es = {
                     webOrder: "Menú online",
                 },
                 gallery: {
-                    landing: "Landing page — presentación del producto",
-                    manager: "Panel de gestión — acceso del operador",
+                    dashboard: "Panel de informes — facturación e indicadores en tiempo real",
+                    map: "Mapa de mesas — operación del salón en tiempo real",
+                    products: "Catálogo de productos — gestión del menú",
                 },
             },
         },

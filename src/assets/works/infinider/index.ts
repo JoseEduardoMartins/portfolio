@@ -1,4 +1,6 @@
 import landing from "./landing.webp";
-import managerLogin from "./manager-login.webp";
+import dashboard from "./dashboard.webp";
+import map from "./map.webp";
+import products from "./products.webp";
 
-export { landing, managerLogin };
+export { landing, dashboard, map, products };
