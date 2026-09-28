@@ -20,7 +20,7 @@ const Contact = () => {
       className="w-full max-w-[980px] mx-auto pt-24 px-6 pb-[60px] scroll-mt-20"
     >
       <Reveal className="relative overflow-hidden flex flex-col items-center text-center gap-[18px] py-14 px-8 bg-surface border border-border rounded-[var(--radius-lg)] shadow-[var(--shadow)] max-[560px]:py-10 max-[560px]:px-5">
-        <div className="absolute top-[-60%] left-1/2 -translate-x-1/2 w-[420px] h-[420px] bg-[var(--gradient)] blur-[90px] opacity-[0.14] pointer-events-none" />
+        <div className="absolute top-[-60%] left-1/2 -translate-x-1/2 w-[420px] h-[420px] bg-[image:var(--gradient)] blur-[90px] opacity-[0.14] pointer-events-none" />
         <span className="relative text-[13px] font-semibold tracking-[0.16em] uppercase text-accent">
           {t("home.contact.eyebrow")}
         </span>

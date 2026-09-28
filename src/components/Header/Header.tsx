@@ -7,7 +7,7 @@ const Header = () => (
       href="#home"
       aria-label="José Eduardo Martins"
     >
-      <span className="inline-flex items-center justify-center w-10 h-10 font-display text-[15px] font-bold text-bg bg-[var(--gradient)] rounded-[11px] tracking-[-0.02em]">
+      <span className="inline-flex items-center justify-center w-10 h-10 font-display text-[15px] font-bold text-bg bg-[image:var(--gradient)] rounded-[11px] tracking-[-0.02em]">
         JEM
       </span>
       <span className="font-display font-semibold text-base text-text max-[600px]:hidden">
