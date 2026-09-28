@@ -77,7 +77,7 @@ const Repository = ({ repository, delay }: RepositoryProps) => (
             className="w-[11px] h-[11px] rounded-full"
             style={{
               background:
-                LANGUAGE_COLORS[repository.language] || "var(--accent)",
+                LANGUAGE_COLORS[repository.language] || "var(--color-accent)",
             }}
           />
           {repository.language}

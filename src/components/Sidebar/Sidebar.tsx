@@ -17,7 +17,7 @@ const Sidebar = () => (
         </a>
       ))}
     </div>
-    <span className="w-px h-[90px] bg-[linear-gradient(to_bottom,var(--border-strong),transparent)]" />
+    <span className="w-px h-[90px] bg-[linear-gradient(to_bottom,var(--color-border-strong),transparent)]" />
   </div>
 );
 

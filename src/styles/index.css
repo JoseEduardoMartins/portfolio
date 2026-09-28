@@ -39,29 +39,6 @@
   --shadow-glow: 0 0 0 1px var(--color-border),
     0 20px 40px -24px rgba(45, 212, 191, 0.25);
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
-
-  /* TEMPORÁRIO (migração): nomes legados usados pelos CSS Modules ainda não
-     convertidos. Remover na Task 13, quando não houver mais .module.css. */
-  --bg: var(--color-bg);
-  --bg-elevated: var(--color-bg-elevated);
-  --surface: var(--color-surface);
-  --surface-2: var(--color-surface-2);
-  --surface-3: var(--color-surface-3);
-  --border: var(--color-border);
-  --border-strong: var(--color-border-strong);
-  --text: var(--color-text);
-  --text-muted: var(--color-text-muted);
-  --text-dim: var(--color-text-dim);
-  --accent: var(--color-accent);
-  --accent-2: var(--color-accent-2);
-  --accent-3: var(--color-accent-3);
-  --first-color: var(--color-bg);
-  --second-color: var(--color-accent);
-  --third-color: var(--color-text);
-  --fourth-color: var(--color-text-muted);
-  --fifth-color: var(--color-surface-2);
-  --sixth-color: rgba(45, 212, 191, 0.65);
-  --seventh-color: var(--color-surface);
 }
 
 /* Keyframes usados por componentes (nomes próprios p/ não colidir com os
