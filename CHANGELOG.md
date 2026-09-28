@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/JoseEduardoMartins/portfolio/compare/v1.2.1...v1.3.0) (2026-09-28)
+
+
+### Features
+
+* expand Infinider gallery with order flow and audit log screens ([abd3510](https://github.com/JoseEduardoMartins/portfolio/commit/abd3510cf36eff253c49c7eeb5868bccd5eba715))
+* showcase real Infinider system screens in the case study gallery ([561806b](https://github.com/JoseEduardoMartins/portfolio/commit/561806b685ab39cd435837505449705e6f233ae9))
+
 ## [1.2.1](https://github.com/JoseEduardoMartins/portfolio/compare/v1.2.0...v1.2.1) (2026-09-28)
 
 
