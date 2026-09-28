@@ -17,7 +17,7 @@ const Experiences = () => {
         title={t("home.experience.title")}
       />
 
-      <div className="relative flex flex-col gap-5 pl-[30px] max-[560px]:pl-[22px] before:content-[''] before:absolute before:left-1.5 before:top-1.5 before:bottom-1.5 before:w-0.5 before:bg-[linear-gradient(to_bottom,var(--accent),var(--border)_60%,transparent)]">
+      <div className="relative flex flex-col gap-5 pl-[30px] max-[560px]:pl-[22px] before:content-[''] before:absolute before:left-1.5 before:top-1.5 before:bottom-1.5 before:w-0.5 before:bg-[linear-gradient(to_bottom,var(--color-accent),var(--color-border)_60%,transparent)]">
         {experiences.map((experience, index) => (
           <Experience
             key={experience.id}

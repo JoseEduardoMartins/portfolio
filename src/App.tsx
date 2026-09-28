@@ -4,12 +4,12 @@ import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
 
 const App = () => (
-    <div className="app">
-        <Header />
-        <Sidebar />
-        <Home />
-        <Footer />
-    </div>
+  <div className="w-full min-h-screen overflow-x-hidden text-text">
+    <Header />
+    <Sidebar />
+    <Home />
+    <Footer />
+  </div>
 );
 
 export default App;
