@@ -5,6 +5,51 @@ const ptBr = {
             english: "Inglês",
             spanish: "Espanhol",
         },
+        nav: {
+            home: "Início",
+            about: "Sobre",
+            work: "Trabalhos",
+            contact: "Contato",
+        },
+        pages: {
+            about: {
+                eyebrow: "Trajetória",
+                title: "Experiência & formação",
+                intro: "Onde trabalhei, as tecnologias que domino e como cheguei até aqui.",
+            },
+            work: {
+                eyebrow: "Trabalhos",
+                title: "Produtos & projetos",
+                intro: "Produtos reais que construí de ponta a ponta, além de projetos open-source no meu GitHub.",
+            },
+        },
+        works: {
+            type: "Produto próprio",
+            viewCase: "Ver case study",
+            infinider: {
+                tagline:
+                    "Plataforma completa de gestão para restaurantes — do cardápio digital ao painel operacional em tempo real.",
+                aboutTitle: "Sobre o projeto",
+                summary:
+                    "O Infinider é um produto full-stack que criei para digitalizar a operação de restaurantes: um portal de pedidos para o cliente, um painel de gestão para operadores e donos, e um backend multi-tenant com atualizações em tempo real.",
+                solution:
+                    "A arquitetura reúne três frontends em React e um backend em NestJS com WebSocket, RBAC e multi-tenancy — cada restaurante com dados isolados, pedidos e ocupação de mesas atualizados ao vivo direto da cozinha.",
+                role: "Full-stack — arquitetura, frontend, backend e design system",
+                roleLabel: "Meu papel",
+                stackLabel: "Stack",
+                galleryTitle: "Telas",
+                back: "Trabalhos",
+                liveLinks: {
+                    landing: "Landing page",
+                    manager: "Painel de gestão",
+                    webOrder: "Cardápio online",
+                },
+                gallery: {
+                    landing: "Landing page — apresentação do produto",
+                    manager: "Painel de gestão — acesso do operador",
+                },
+            },
+        },
         header: {
             about: "Sobre",
             experiences: "Experiência",

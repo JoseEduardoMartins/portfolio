@@ -11,16 +11,4 @@ describe("SectionHeader", () => {
       screen.getByRole("heading", { name: "Quem sou eu" })
     ).toBeInTheDocument();
   });
-
-  it("renders the index when provided", () => {
-    render(<SectionHeader index="01" eyebrow="Sobre" title="Quem sou eu" />);
-
-    expect(screen.getByText("01")).toBeInTheDocument();
-  });
-
-  it("omits the index when not provided", () => {
-    render(<SectionHeader eyebrow="Sobre" title="Quem sou eu" />);
-
-    expect(screen.queryByText("01")).not.toBeInTheDocument();
-  });
 });

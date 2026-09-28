@@ -1,25 +1,14 @@
 import { useEffect, useRef, useState } from "react";
-import Translator from "../../I18n/Translator";
+import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import TranslateOptions from "../../I18n/TranslateOptions";
 import Icon from "../../Icon";
-import useActiveSection from "../../../hooks/useActiveSection";
 
 const navItems = [
-  { id: "about", path: "header.about" },
-  { id: "experiences", path: "header.experiences" },
-  { id: "skils", path: "header.skills" },
-  { id: "repositories", path: "header.repositories" },
-  { id: "contact", path: "header.contact" },
-];
-
-const sectionIds = [
-  "home",
-  "about",
-  "experiences",
-  "skils",
-  "education",
-  "repositories",
-  "contact",
+  { to: "/", key: "nav.home", end: true },
+  { to: "/about", key: "nav.about", end: false },
+  { to: "/work", key: "nav.work", end: false },
+  { to: "/contact", key: "nav.contact", end: false },
 ];
 
 const linkBase =
@@ -28,9 +17,9 @@ const linkBase =
   "after:bg-accent after:transition-[width] after:duration-[250ms] after:ease-[var(--ease)]";
 
 const Menu = () => {
+  const { t } = useTranslation();
   const dropdownRef = useRef<HTMLDivElement>(null);
   const [isActive, setIsActive] = useState(false);
-  const active = useActiveSection(sectionIds);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -47,18 +36,21 @@ const Menu = () => {
 
   const renderLinks = (onClick?: () => void) =>
     navItems.map((item) => (
-      <a
-        key={item.id}
-        className={`${linkBase} ${
-          active === item.id
-            ? "text-accent after:w-full"
-            : "text-text-muted after:w-0"
-        }`}
-        href={`#${item.id}`}
+      <NavLink
+        key={item.to}
+        to={item.to}
+        end={item.end}
         onClick={onClick}
+        className={({ isActive: active }) =>
+          `${linkBase} ${
+            active
+              ? "text-accent after:w-full"
+              : "text-text-muted after:w-0"
+          }`
+        }
       >
-        <Translator path={item.path} />
-      </a>
+        {t(item.key)}
+      </NavLink>
     ));
 
   return (
