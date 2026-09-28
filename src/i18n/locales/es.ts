@@ -45,7 +45,9 @@ const es = {
                     webOrder: "Menú online",
                 },
                 gallery: {
+                    flow: "Flujo de pedidos — menú y comanda en el mostrador/mesa",
                     dashboard: "Panel de informes — facturación e indicadores en tiempo real",
+                    audit: "Auditoría — registro completo de todas las acciones",
                     map: "Mapa de mesas — operación del salón en tiempo real",
                     products: "Catálogo de productos — gestión del menú",
                 },

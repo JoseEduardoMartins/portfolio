@@ -45,7 +45,9 @@ const enUs = {
                     webOrder: "Online menu",
                 },
                 gallery: {
+                    flow: "Order flow — menu and tab at the counter/table",
                     dashboard: "Reports dashboard — revenue and live KPIs",
+                    audit: "Audit log — full trail of every system action",
                     map: "Table map — real-time floor operations",
                     products: "Product catalog — menu management",
                 },

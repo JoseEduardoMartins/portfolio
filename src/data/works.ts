@@ -1,6 +1,13 @@
 // Trabalhos reais (produtos). Textos (tagline/summary/role) vêm do i18n em
 // `works.<id>.*`; stack, links e imagens são dados fixos aqui.
-import { landing, dashboard, map, products } from "../assets/works/infinider";
+import {
+  landing,
+  flow,
+  dashboard,
+  audit,
+  map,
+  products,
+} from "../assets/works/infinider";
 
 export interface WorkImage {
   src: string;
@@ -52,7 +59,9 @@ const works: Work[] = [
     },
     cover: landing,
     gallery: [
+      { src: flow, captionKey: "works.infinider.gallery.flow" },
       { src: dashboard, captionKey: "works.infinider.gallery.dashboard" },
+      { src: audit, captionKey: "works.infinider.gallery.audit" },
       { src: map, captionKey: "works.infinider.gallery.map" },
       { src: products, captionKey: "works.infinider.gallery.products" },
     ],
