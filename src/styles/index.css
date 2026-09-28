@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0f1e;
+  --color-bg-elevated: #0d1426;
+  --color-surface: #111a2e;
+  --color-surface-2: #16213b;
+  --color-surface-3: #1c2a47;
+  --color-border: rgba(148, 163, 184, 0.14);
+  --color-border-strong: rgba(148, 163, 184, 0.3);
+
+  --color-text: #e6edf7;
+  --color-text-muted: #93a4c3;
+  --color-text-dim: #64748b;
+
+  --color-accent: #2dd4bf;
+  --color-accent-2: #38bdf8;
+  --color-accent-3: #818cf8;
+
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+
+  --radius: 16px;
+  --radius-sm: 10px;
+  --radius-lg: 24px;
+}
+
+/* Custom properties sem utilitário direto (usar via bg-[var(--gradient)] etc.) */
+:root {
+  --accent-soft: rgba(45, 212, 191, 0.12);
+  --accent-softer: rgba(45, 212, 191, 0.06);
+  --gradient: linear-gradient(120deg, #2dd4bf 0%, #38bdf8 45%, #818cf8 100%);
+  --gradient-soft: linear-gradient(
+    120deg,
+    rgba(45, 212, 191, 0.16),
+    rgba(129, 140, 248, 0.16)
+  );
+  --shadow: 0 24px 50px -24px rgba(2, 6, 23, 0.8);
+  --shadow-glow: 0 0 0 1px var(--color-border),
+    0 20px 40px -24px rgba(45, 212, 191, 0.25);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* TEMPORÁRIO (migração): nomes legados usados pelos CSS Modules ainda não
+     convertidos. Remover na Task 13, quando não houver mais .module.css. */
+  --bg: var(--color-bg);
+  --bg-elevated: var(--color-bg-elevated);
+  --surface: var(--color-surface);
+  --surface-2: var(--color-surface-2);
+  --surface-3: var(--color-surface-3);
+  --border: var(--color-border);
+  --border-strong: var(--color-border-strong);
+  --text: var(--color-text);
+  --text-muted: var(--color-text-muted);
+  --text-dim: var(--color-text-dim);
+  --accent: var(--color-accent);
+  --accent-2: var(--color-accent-2);
+  --accent-3: var(--color-accent-3);
+  --first-color: var(--color-bg);
+  --second-color: var(--color-accent);
+  --third-color: var(--color-text);
+  --fourth-color: var(--color-text-muted);
+  --fifth-color: var(--color-surface-2);
+  --sixth-color: rgba(45, 212, 191, 0.65);
+  --seventh-color: var(--color-surface);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+  }
+
+  body {
+    margin: 0;
+    line-height: 1.6;
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: radial-gradient(
+        60rem 60rem at 80% -10%,
+        rgba(45, 212, 191, 0.1),
+        transparent 60%
+      ),
+      radial-gradient(
+        50rem 50rem at 0% 20%,
+        rgba(129, 140, 248, 0.1),
+        transparent 55%
+      );
+    background-attachment: fixed;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+  }
+
+  /* scrollbar custom (antigo scrolbar.css) */
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--color-bg);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--color-surface-3);
+    border-radius: 20px;
+    border: 2px solid var(--color-bg);
+  }
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-accent);
+  }
+
+  /* scroll reveal (antigo app.css) */
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    will-change: opacity, transform;
+  }
+  [data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    [data-reveal] {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+}
