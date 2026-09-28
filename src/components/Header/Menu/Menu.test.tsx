@@ -17,7 +17,7 @@ describe("Menu", () => {
     const hrefs = screen
       .getAllByRole("link")
       .map((link) => link.getAttribute("href"));
-    expect(hrefs).toEqual(["/", "/about", "/work", "/contact"]);
+    expect(hrefs).toEqual(["/", "/journey", "/work", "/contact"]);
   });
 
   it("marks the current route as active", () => {

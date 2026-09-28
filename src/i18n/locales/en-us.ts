@@ -7,13 +7,13 @@ const enUs = {
         },
         nav: {
             home: "Home",
-            about: "About",
+            journey: "Journey",
             work: "Work",
             contact: "Contact",
         },
         pages: {
-            about: {
-                eyebrow: "Background",
+            journey: {
+                eyebrow: "Journey",
                 title: "Experience & education",
                 intro: "Where I've worked, the technologies I know well, and how I got here.",
             },

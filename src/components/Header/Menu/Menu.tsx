@@ -6,7 +6,7 @@ import Icon from "../../Icon";
 
 const navItems = [
   { to: "/", key: "nav.home", end: true },
-  { to: "/about", key: "nav.about", end: false },
+  { to: "/journey", key: "nav.journey", end: false },
   { to: "/work", key: "nav.work", end: false },
   { to: "/contact", key: "nav.contact", end: false },
 ];

@@ -7,12 +7,12 @@ const es = {
         },
         nav: {
             home: "Inicio",
-            about: "Sobre mí",
+            journey: "Trayectoria",
             work: "Trabajos",
             contact: "Contacto",
         },
         pages: {
-            about: {
+            journey: {
                 eyebrow: "Trayectoria",
                 title: "Experiencia y formación",
                 intro: "Dónde he trabajado, las tecnologías que domino y cómo llegué hasta aquí.",

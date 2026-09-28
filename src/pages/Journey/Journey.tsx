@@ -4,16 +4,16 @@ import Experiences from "../../sections/Experiences";
 import Skils from "../../sections/Skils";
 import Education from "../../sections/Education";
 
-const About = () => {
+const Journey = () => {
   const { t } = useTranslation();
 
   return (
     <div className="w-full">
       <div className="max-w-[980px] mx-auto px-6 pt-[calc(70px+clamp(3rem,8vw,6rem))]">
         <PageHeader
-          eyebrow={t("pages.about.eyebrow")}
-          title={t("pages.about.title")}
-          intro={t("pages.about.intro")}
+          eyebrow={t("pages.journey.eyebrow")}
+          title={t("pages.journey.title")}
+          intro={t("pages.journey.intro")}
         />
       </div>
       <Experiences />
@@ -23,4 +23,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Journey;
