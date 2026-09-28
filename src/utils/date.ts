@@ -1,11 +1,14 @@
 // Localized "Aug 2024" / "ago. 2024" / "ago. 2024" style formatting.
-const localeMap = {
+const localeMap: Record<string, string> = {
     "pt-BR": "pt-BR",
     "en-US": "en-US",
     es: "es-ES",
 };
 
-export const formatMonthYear = (iso, language) => {
+export const formatMonthYear = (
+    iso: string | null,
+    language: string
+): string | null => {
     if (!iso) return null;
     const locale = localeMap[language] || "pt-BR";
     const [year, month] = iso.split("-");
@@ -19,7 +22,18 @@ export const formatMonthYear = (iso, language) => {
 };
 
 // Rough duration between two ISO "YYYY-MM" dates (end null = now).
-export const durationInYearsMonths = (startIso, endIso, labels) => {
+export interface DurationLabels {
+    year: string;
+    years: string;
+    month: string;
+    months: string;
+}
+
+export const durationInYearsMonths = (
+    startIso: string,
+    endIso: string | null,
+    labels: DurationLabels
+): string => {
     const [sy, sm] = startIso.split("-").map(Number);
     const end = endIso ? endIso.split("-").map(Number) : null;
     const now = new Date();

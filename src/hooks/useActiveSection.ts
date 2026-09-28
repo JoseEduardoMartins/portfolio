@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 /**
  * Returns the id of the section currently in view, for nav highlighting.
  */
-const useActiveSection = (ids) => {
+const useActiveSection = (ids: string[]) => {
     const [active, setActive] = useState(ids[0]);
 
     useEffect(() => {
         const sections = ids
             .map((id) => document.getElementById(id))
-            .filter(Boolean);
+            .filter((el): el is HTMLElement => el !== null);
 
         const observer = new IntersectionObserver(
             (entries) => {

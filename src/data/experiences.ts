@@ -2,7 +2,22 @@
 // `start` / `end` use ISO "YYYY-MM" and are localized at render time.
 // `descriptionKey` points to i18n so each role is translated in PT / EN / ES.
 
-const experiences = [
+export interface Experience {
+  id: string;
+  role: string;
+  company: string;
+  employment: string;
+  start: string;
+  end: string | null;
+  current: boolean;
+  location: string;
+  locationType: "remote" | "hybrid" | "onsite";
+  domain: string;
+  descriptionKey: string;
+  stack: string[];
+}
+
+const experiences: Experience[] = [
     {
         id: "viasoft",
         role: "Mid-Level Software Developer",
