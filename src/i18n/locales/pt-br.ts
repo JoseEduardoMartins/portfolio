@@ -7,12 +7,12 @@ const ptBr = {
         },
         nav: {
             home: "Início",
-            about: "Sobre",
+            journey: "Trajetória",
             work: "Trabalhos",
             contact: "Contato",
         },
         pages: {
-            about: {
+            journey: {
                 eyebrow: "Trajetória",
                 title: "Experiência & formação",
                 intro: "Onde trabalhei, as tecnologias que domino e como cheguei até aqui.",
