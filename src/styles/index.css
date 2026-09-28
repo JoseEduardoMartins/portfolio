@@ -64,6 +64,34 @@
   --seventh-color: var(--color-surface);
 }
 
+/* Keyframes usados por componentes (nomes próprios p/ não colidir com os
+   utilitários de animação nativos do Tailwind, ex.: animate-pulse). */
+@keyframes badgePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(45, 212, 191, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(45, 212, 191, 0);
+  }
+}
+
+@keyframes scrollWheel {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 12px);
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
