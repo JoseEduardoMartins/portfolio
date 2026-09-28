@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/JoseEduardoMartins/portfolio/compare/v1.2.0...v1.2.1) (2026-09-28)
+
+
+### Bug Fixes
+
+* replace default React favicon.ico with branded icon ([dd18b96](https://github.com/JoseEduardoMartins/portfolio/commit/dd18b960091b26af47959f5454981e7e196aa62c))
+
 # [1.2.0](https://github.com/JoseEduardoMartins/portfolio/compare/v1.1.0...v1.2.0) (2026-09-28)
 
 
