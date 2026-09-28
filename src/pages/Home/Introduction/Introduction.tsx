@@ -37,7 +37,7 @@ const Introduction = () => {
           <Translator path="home.introduction.hi" />
         </p>
 
-        <h1 className="font-display text-[clamp(2.7rem,8vw,5rem)] leading-[1.02] font-bold tracking-[-0.02em] bg-[var(--gradient)] bg-clip-text text-transparent">
+        <h1 className="font-display text-[clamp(2.7rem,8vw,5rem)] leading-[1.02] font-bold tracking-[-0.02em] bg-[image:var(--gradient)] bg-clip-text text-transparent">
           José Eduardo Martins
         </h1>
 

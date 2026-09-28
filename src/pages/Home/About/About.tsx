@@ -43,7 +43,7 @@ const About = () => {
                 key={stat.labelKey}
                 className="flex-1 min-w-[120px] flex flex-col gap-1 py-[18px] px-5 bg-surface border border-border rounded-[var(--radius-sm)]"
               >
-                <span className="font-display text-[30px] font-bold bg-[var(--gradient)] bg-clip-text text-transparent">
+                <span className="font-display text-[30px] font-bold bg-[image:var(--gradient)] bg-clip-text text-transparent">
                   {stat.value}
                 </span>
                 <span className="text-[13px] text-text-muted">
@@ -58,7 +58,7 @@ const About = () => {
           className="relative overflow-hidden flex flex-col gap-[18px] p-[26px] bg-surface border border-border rounded-[var(--radius)] shadow-[var(--shadow)]"
           delay={120}
         >
-          <div className="absolute top-[-40%] right-[-30%] w-[220px] h-[220px] bg-[var(--gradient)] blur-[70px] opacity-[0.16] pointer-events-none" />
+          <div className="absolute top-[-40%] right-[-30%] w-[220px] h-[220px] bg-[image:var(--gradient)] blur-[70px] opacity-[0.16] pointer-events-none" />
           <span className="inline-flex items-center gap-2 font-display font-semibold text-text [&_svg]:text-accent">
             <Icon size="small">sparkles</Icon>
             <Translator path="home.about.quickFacts" />
