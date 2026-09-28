@@ -5,6 +5,51 @@ const enUs = {
             english: "English",
             spanish: "Spanish",
         },
+        nav: {
+            home: "Home",
+            about: "About",
+            work: "Work",
+            contact: "Contact",
+        },
+        pages: {
+            about: {
+                eyebrow: "Background",
+                title: "Experience & education",
+                intro: "Where I've worked, the technologies I know well, and how I got here.",
+            },
+            work: {
+                eyebrow: "Work",
+                title: "Products & projects",
+                intro: "Real products I built end to end, plus open-source projects on my GitHub.",
+            },
+        },
+        works: {
+            type: "Own product",
+            viewCase: "View case study",
+            infinider: {
+                tagline:
+                    "A complete restaurant management platform — from the digital menu to a real-time operations dashboard.",
+                aboutTitle: "About the project",
+                summary:
+                    "Infinider is a full-stack product I built to digitize restaurant operations: a customer ordering portal, a management dashboard for operators and owners, and a multi-tenant backend with real-time updates.",
+                solution:
+                    "The architecture combines three React frontends and a NestJS backend with WebSocket, RBAC and multi-tenancy — each restaurant with isolated data, orders and table occupancy updated live from the kitchen.",
+                role: "Full-stack — architecture, frontend, backend and design system",
+                roleLabel: "My role",
+                stackLabel: "Stack",
+                galleryTitle: "Screens",
+                back: "Work",
+                liveLinks: {
+                    landing: "Landing page",
+                    manager: "Management dashboard",
+                    webOrder: "Online menu",
+                },
+                gallery: {
+                    landing: "Landing page — product overview",
+                    manager: "Management dashboard — operator sign-in",
+                },
+            },
+        },
         header: {
             about: "About",
             experiences: "Experience",

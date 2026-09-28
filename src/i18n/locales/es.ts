@@ -5,6 +5,51 @@ const es = {
             english: "Inglés",
             spanish: "Español",
         },
+        nav: {
+            home: "Inicio",
+            about: "Sobre mí",
+            work: "Trabajos",
+            contact: "Contacto",
+        },
+        pages: {
+            about: {
+                eyebrow: "Trayectoria",
+                title: "Experiencia y formación",
+                intro: "Dónde he trabajado, las tecnologías que domino y cómo llegué hasta aquí.",
+            },
+            work: {
+                eyebrow: "Trabajos",
+                title: "Productos y proyectos",
+                intro: "Productos reales que construí de principio a fin, además de proyectos open-source en mi GitHub.",
+            },
+        },
+        works: {
+            type: "Producto propio",
+            viewCase: "Ver caso de estudio",
+            infinider: {
+                tagline:
+                    "Plataforma completa de gestión para restaurantes — del menú digital al panel operativo en tiempo real.",
+                aboutTitle: "Sobre el proyecto",
+                summary:
+                    "Infinider es un producto full-stack que creé para digitalizar la operación de restaurantes: un portal de pedidos para el cliente, un panel de gestión para operadores y dueños, y un backend multi-tenant con actualizaciones en tiempo real.",
+                solution:
+                    "La arquitectura reúne tres frontends en React y un backend en NestJS con WebSocket, RBAC y multi-tenancy — cada restaurante con datos aislados, pedidos y ocupación de mesas actualizados en vivo desde la cocina.",
+                role: "Full-stack — arquitectura, frontend, backend y design system",
+                roleLabel: "Mi rol",
+                stackLabel: "Stack",
+                galleryTitle: "Pantallas",
+                back: "Trabajos",
+                liveLinks: {
+                    landing: "Landing page",
+                    manager: "Panel de gestión",
+                    webOrder: "Menú online",
+                },
+                gallery: {
+                    landing: "Landing page — presentación del producto",
+                    manager: "Panel de gestión — acceso del operador",
+                },
+            },
+        },
         header: {
             about: "Sobre mí",
             experiences: "Experiencia",
