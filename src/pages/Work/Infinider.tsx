@@ -40,42 +40,6 @@ const Infinider = () => {
         <p className="max-w-[60ch] text-[clamp(1.1rem,2.4vw,1.35rem)] leading-[1.55] text-text-muted">
           {t(infinider.taglineKey)}
         </p>
-
-        <div className="flex flex-wrap gap-3 pt-1">
-          {infinider.links.landing && (
-            <a
-              className={`${linkButtonBase} text-bg bg-accent border border-accent hover:-translate-y-0.5`}
-              href={infinider.links.landing}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {t("works.infinider.liveLinks.landing")}
-              <Icon size="small">arrowUpRight</Icon>
-            </a>
-          )}
-          {infinider.links.manager && (
-            <a
-              className={`${linkButtonBase} text-text bg-transparent border border-border-strong hover:-translate-y-0.5 hover:border-accent hover:text-accent`}
-              href={infinider.links.manager}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {t("works.infinider.liveLinks.manager")}
-              <Icon size="small">arrowUpRight</Icon>
-            </a>
-          )}
-          {infinider.links.webOrder && (
-            <a
-              className={`${linkButtonBase} text-text bg-transparent border border-border-strong hover:-translate-y-0.5 hover:border-accent hover:text-accent`}
-              href={infinider.links.webOrder}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {t("works.infinider.liveLinks.webOrder")}
-              <Icon size="small">arrowUpRight</Icon>
-            </a>
-          )}
-        </div>
       </Reveal>
 
       {/* Sobre + papel + stack */}
@@ -86,9 +50,6 @@ const Infinider = () => {
           </h2>
           <p className="text-[16px] leading-[1.7] text-text-muted">
             {t("works.infinider.summary")}
-          </p>
-          <p className="text-[16px] leading-[1.7] text-text-muted">
-            {t("works.infinider.solution")}
           </p>
         </div>
 
@@ -119,29 +80,52 @@ const Infinider = () => {
         </aside>
       </Reveal>
 
-      {/* Galeria */}
-      <div className="flex flex-col gap-6">
+      {/* Arquitetura do sistema */}
+      <Reveal className="flex flex-col gap-6">
         <h2 className="font-display text-2xl font-bold tracking-[-0.02em] text-text">
-          {t("works.infinider.galleryTitle")}
+          {t("works.infinider.components.title")}
         </h2>
-        <div className="flex flex-col gap-8">
-          {infinider.gallery.map((image, index) => (
-            <Reveal key={image.src} delay={index * 60} className="flex flex-col gap-3">
-              <div className="overflow-hidden rounded-[var(--radius-lg)] border border-border bg-surface shadow-[var(--shadow)]">
-                <img
-                  src={image.src}
-                  alt={t(image.captionKey)}
-                  loading="lazy"
-                  className="w-full"
-                />
+        <div className="grid gap-4 md:grid-cols-2">
+          {infinider.components.map((component) => (
+            <div
+              key={component.id}
+              className={`flex flex-col gap-4 p-6 bg-surface border border-border rounded-[var(--radius)] ${
+                component.id === "designSystem" ? "md:col-span-2" : ""
+              }`}
+            >
+              <div className="flex flex-col gap-2">
+                <h3 className="text-[17px] font-semibold tracking-[-0.01em] text-text">
+                  {t(component.nameKey)}
+                </h3>
+                <p className="text-[14.5px] leading-[1.65] text-text-muted">
+                  {t(component.descKey)}
+                </p>
               </div>
-              <span className="text-[13.5px] text-text-dim">
-                {t(image.captionKey)}
-              </span>
-            </Reveal>
+              <div className="flex flex-wrap gap-1.5">
+                {component.stack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="py-[3px] px-[9px] text-[11.5px] font-medium text-text-muted bg-surface-2 border border-border rounded-md"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              {component.link && component.linkLabelKey && (
+                <a
+                  className={`${linkButtonBase} self-start text-text bg-transparent border border-border-strong hover:-translate-y-0.5 hover:border-accent hover:text-accent`}
+                  href={component.link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t(component.linkLabelKey)}
+                  <Icon size="small">arrowUpRight</Icon>
+                </a>
+              )}
+            </div>
           ))}
         </div>
-      </div>
+      </Reveal>
     </article>
   );
 };

@@ -1,17 +1,14 @@
 // Trabalhos reais (produtos). Textos (tagline/summary/role) vêm do i18n em
-// `works.<id>.*`; stack, links e imagens são dados fixos aqui.
-import {
-  landing,
-  flow,
-  dashboard,
-  audit,
-  map,
-  products,
-} from "../assets/works/infinider";
+// `works.<id>.*`; stack, componentes e cover são dados fixos aqui.
+import { landing } from "../assets/works/infinider";
 
-export interface WorkImage {
-  src: string;
-  captionKey: string;
+export interface WorkComponent {
+  id: string;
+  nameKey: string;
+  descKey: string;
+  stack: string[];
+  link?: string;
+  linkLabelKey?: string;
 }
 
 export interface Work {
@@ -23,13 +20,8 @@ export interface Work {
   summaryKey: string;
   roleKey: string;
   stack: string[];
-  links: {
-    landing?: string;
-    manager?: string;
-    webOrder?: string;
-  };
+  components: WorkComponent[];
   cover: string;
-  gallery: WorkImage[];
 }
 
 const works: Work[] = [
@@ -52,19 +44,47 @@ const works: Work[] = [
       "Vite",
       "Design System",
     ],
-    links: {
-      landing: "https://fast-food-landing-page-frontend.vercel.app/",
-      manager: "https://fast-food-manager-frontend.vercel.app/login",
-      webOrder: "https://fast-food-web-order-frontend.vercel.app/",
-    },
-    cover: landing,
-    gallery: [
-      { src: flow, captionKey: "works.infinider.gallery.flow" },
-      { src: dashboard, captionKey: "works.infinider.gallery.dashboard" },
-      { src: audit, captionKey: "works.infinider.gallery.audit" },
-      { src: map, captionKey: "works.infinider.gallery.map" },
-      { src: products, captionKey: "works.infinider.gallery.products" },
+    components: [
+      {
+        id: "backend",
+        nameKey: "works.infinider.components.backend.name",
+        descKey: "works.infinider.components.backend.desc",
+        stack: ["NestJS", "TypeORM", "MySQL", "WebSocket", "RBAC"],
+      },
+      {
+        id: "manager",
+        nameKey: "works.infinider.components.manager.name",
+        descKey: "works.infinider.components.manager.desc",
+        stack: ["React", "React Query", "Vite"],
+        link: "https://fast-food-manager-frontend.vercel.app/login",
+        linkLabelKey: "works.infinider.components.liveLabel",
+      },
+      {
+        id: "landing",
+        nameKey: "works.infinider.components.landing.name",
+        descKey: "works.infinider.components.landing.desc",
+        stack: ["React", "Vite"],
+        link: "https://fast-food-landing-page-frontend.vercel.app/",
+        linkLabelKey: "works.infinider.components.liveLabel",
+      },
+      {
+        id: "webOrder",
+        nameKey: "works.infinider.components.webOrder.name",
+        descKey: "works.infinider.components.webOrder.desc",
+        stack: ["React", "React Query"],
+        link: "https://fast-food-web-order-frontend.vercel.app/",
+        linkLabelKey: "works.infinider.components.liveLabel",
+      },
+      {
+        id: "designSystem",
+        nameKey: "works.infinider.components.designSystem.name",
+        descKey: "works.infinider.components.designSystem.desc",
+        stack: ["Atomic Design", "React", "TypeScript", "Tailwind", "Storybook"],
+        link: "https://www.npmjs.com/package/@fast-food/design-system",
+        linkLabelKey: "works.infinider.components.npmLabel",
+      },
     ],
+    cover: landing,
   },
 ];
 

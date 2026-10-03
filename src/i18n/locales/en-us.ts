@@ -32,24 +32,34 @@ const enUs = {
                 aboutTitle: "About the project",
                 summary:
                     "Infinider is a full-stack product I built to digitize restaurant operations: a customer ordering portal, a management dashboard for operators and owners, and a multi-tenant backend with real-time updates.",
-                solution:
-                    "The architecture combines three React frontends and a NestJS backend with WebSocket, RBAC and multi-tenancy — each restaurant with isolated data, orders and table occupancy updated live from the kitchen.",
                 role: "Full-stack — architecture, frontend, backend and design system",
                 roleLabel: "My role",
                 stackLabel: "Stack",
-                galleryTitle: "Screens",
                 back: "Work",
-                liveLinks: {
-                    landing: "Landing page",
-                    manager: "Management dashboard",
-                    webOrder: "Online menu",
-                },
-                gallery: {
-                    flow: "Order flow — menu and tab at the counter/table",
-                    dashboard: "Reports dashboard — revenue and live KPIs",
-                    audit: "Audit log — full trail of every system action",
-                    map: "Table map — real-time floor operations",
-                    products: "Product catalog — menu management",
+                components: {
+                    title: "System architecture",
+                    liveLabel: "View live",
+                    npmLabel: "View on npm",
+                    backend: {
+                        name: "Backend",
+                        desc: "NestJS API with WebSocket for real-time events, RBAC and multi-tenancy — each restaurant with isolated data. Persistence with TypeORM and MySQL.",
+                    },
+                    manager: {
+                        name: "Management dashboard",
+                        desc: "React frontend for operators and owners: live orders, table map, product catalog, reports and audit log.",
+                    },
+                    landing: {
+                        name: "Landing page",
+                        desc: "Marketing site that presents the product and converts interested restaurants.",
+                    },
+                    webOrder: {
+                        name: "Online menu",
+                        desc: "Customer-facing ordering portal: digital menu, tab and checkout right from the table or counter.",
+                    },
+                    designSystem: {
+                        name: "Design System",
+                        desc: "Component library published to npm as @fast-food/design-system: React + TypeScript + Vite, built on Atomic Design, with Tailwind, color/spacing/typography tokens and Storybook docs — consumed by every frontend.",
+                    },
                 },
             },
         },

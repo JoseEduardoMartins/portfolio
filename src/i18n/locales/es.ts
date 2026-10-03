@@ -32,24 +32,34 @@ const es = {
                 aboutTitle: "Sobre el proyecto",
                 summary:
                     "Infinider es un producto full-stack que creé para digitalizar la operación de restaurantes: un portal de pedidos para el cliente, un panel de gestión para operadores y dueños, y un backend multi-tenant con actualizaciones en tiempo real.",
-                solution:
-                    "La arquitectura reúne tres frontends en React y un backend en NestJS con WebSocket, RBAC y multi-tenancy — cada restaurante con datos aislados, pedidos y ocupación de mesas actualizados en vivo desde la cocina.",
                 role: "Full-stack — arquitectura, frontend, backend y design system",
                 roleLabel: "Mi rol",
                 stackLabel: "Stack",
-                galleryTitle: "Pantallas",
                 back: "Trabajos",
-                liveLinks: {
-                    landing: "Landing page",
-                    manager: "Panel de gestión",
-                    webOrder: "Menú online",
-                },
-                gallery: {
-                    flow: "Flujo de pedidos — menú y comanda en el mostrador/mesa",
-                    dashboard: "Panel de informes — facturación e indicadores en tiempo real",
-                    audit: "Auditoría — registro completo de todas las acciones",
-                    map: "Mapa de mesas — operación del salón en tiempo real",
-                    products: "Catálogo de productos — gestión del menú",
+                components: {
+                    title: "Arquitectura del sistema",
+                    liveLabel: "Ver en vivo",
+                    npmLabel: "Ver en npm",
+                    backend: {
+                        name: "Backend",
+                        desc: "API en NestJS con WebSocket para eventos en tiempo real, RBAC y multi-tenancy — cada restaurante con datos aislados. Persistencia con TypeORM y MySQL.",
+                    },
+                    manager: {
+                        name: "Panel de gestión",
+                        desc: "Frontend en React para operadores y dueños: pedidos en vivo, mapa de mesas, catálogo de productos, informes y auditoría.",
+                    },
+                    landing: {
+                        name: "Landing page",
+                        desc: "Sitio institucional de captación que presenta el producto y convierte restaurantes interesados.",
+                    },
+                    webOrder: {
+                        name: "Menú online",
+                        desc: "Portal de pedidos para el cliente final: menú digital, comanda y checkout directo desde la mesa o el mostrador.",
+                    },
+                    designSystem: {
+                        name: "Design System",
+                        desc: "Biblioteca de componentes publicada en npm como @fast-food/design-system: React + TypeScript + Vite, estructurada en Atomic Design, con Tailwind, tokens de color/espaciado/tipografía y documentación en Storybook — consumida por todos los frontends.",
+                    },
                 },
             },
         },
