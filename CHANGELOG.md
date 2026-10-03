@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/JoseEduardoMartins/portfolio/compare/v1.3.0...v1.4.0) (2026-10-03)
+
+
+### Features
+
+* **work:** add system architecture section to Infinider case study ([526c98c](https://github.com/JoseEduardoMartins/portfolio/commit/526c98c3e8b0b1eafaf0d6110fface11d3389373))
+
 # [1.3.0](https://github.com/JoseEduardoMartins/portfolio/compare/v1.2.1...v1.3.0) (2026-09-28)
 
 
