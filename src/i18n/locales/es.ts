@@ -25,7 +25,17 @@ const es = {
         },
         works: {
             type: "Producto propio",
+            typeClient: "Proyecto de cliente",
             viewCase: "Ver caso de estudio",
+            labels: {
+                back: "Trabajos",
+                aboutTitle: "Sobre el proyecto",
+                roleLabel: "Mi rol",
+                stackLabel: "Stack",
+                modulesTitle: "Módulos del sistema",
+                builtTitle: "Lo que construí",
+                visitSite: "Ver en vivo",
+            },
             infinider: {
                 tagline:
                     "Plataforma completa de gestión para restaurantes — del menú digital al panel operativo en tiempo real.",
@@ -60,6 +70,109 @@ const es = {
                         name: "Design System",
                         desc: "Biblioteca de componentes publicada en npm como @fast-food/design-system: React + TypeScript + Vite, estructurada en Atomic Design, con Tailwind, tokens de color/espaciado/tipografía y documentación en Storybook — consumida por todos los frontends.",
                     },
+                },
+            },
+            chavetta: {
+                tagline:
+                    "SaaS de gestión inmobiliaria que lleva un inmueble del anuncio al traspaso del alquiler en un solo sistema — escaparate, CRM, contratos y caja.",
+                summary:
+                    "Chavetta es un producto full-stack para corredores e inmobiliarias: el mismo registro del inmueble alimenta el escaparate público, el embudo de leads, la agenda de visitas, el contrato de alquiler y la caja. Sin copiar datos de una herramienta a otra — del primer anuncio al traspaso del alquiler, todo en un solo lugar.",
+                role: "Full-stack — producto, arquitectura, frontend y API",
+                components: {
+                    listings: {
+                        name: "Inmuebles & escaparate",
+                        desc: "Registro de inmuebles con fotos, búsqueda con 13 filtros y un escaparate propio con la marca de la inmobiliaria, que publica en los portales ZAP, VivaReal y OLX y capta leads directo en el CRM.",
+                        tags: ["Escaparate", "13 filtros", "Carga de fotos"],
+                    },
+                    crm: {
+                        name: "CRM & embudo",
+                        desc: "Embudo de ventas en kanban con 7 etapas: cada visitante del escaparate se convierte en lead automáticamente y avanza arrastrando la tarjeta.",
+                        tags: ["Kanban", "7 etapas", "Leads automáticos"],
+                    },
+                    agenda: {
+                        name: "Clientes & agenda",
+                        desc: "Match entre las preferencias del cliente y los inmuebles disponibles, propietarios con datos bancarios y PIX, y agenda de visitas con confirmación automática por WhatsApp.",
+                        tags: ["Match de inmuebles", "Agenda", "WhatsApp"],
+                    },
+                    finance: {
+                        name: "Finanzas & caja",
+                        desc: "Flujo de caja con ingresos y gastos; alquiler, traspaso, comisión y multa entran en la caja solos, con panel de inventario, embudo y saldo del mes.",
+                        tags: ["Flujo de caja", "Comisiones", "Panel"],
+                    },
+                    rent: {
+                        name: "Alquileres & cobranza",
+                        desc: "Contratos de alquiler con cuotas automáticas, boleto y PIX con conciliación automática, morosidad con multa e intereses proporcionales y traspaso al propietario en lote.",
+                        tags: ["Boleto & PIX", "Conciliación automática", "Traspaso"],
+                    },
+                    marketing: {
+                        name: "Marketing con IA",
+                        desc: "Feed en el estándar VRSync para los portales y textos para Instagram, Facebook y TikTok generados con IA en el tono de cada red.",
+                        tags: ["VRSync", "ZAP · VivaReal · OLX", "IA generativa"],
+                    },
+                },
+            },
+            teamManager: {
+                tagline:
+                    "Kit de gestión de equipos para pequeñas y medianas empresas: lo que se decide en la reunión se convierte en resultado, sin planillas dispersas.",
+                summary:
+                    "El Kit de Gestión de Equipos reúne el ciclo completo de gestión en un solo sistema — del diagnóstico del área a los indicadores. Son 5 módulos y 15 herramientas para organizar responsabilidades, conducir reuniones con agenda, dar seguimiento a los compromisos, desarrollar a las personas y acompañar metas, con 5 perfiles de acceso e informes en PDF.",
+                role: "Full-stack — producto, arquitectura, frontend y backend",
+                components: {
+                    organization: {
+                        name: "Organización & procesos",
+                        desc: "Diagnóstico del área, matriz de actividades, mapa de responsabilidades con niveles de decisión (ejecuta, recomienda, decide, aprueba) y procedimientos operativos.",
+                        tags: ["Matriz de actividades", "Responsabilidades", "POPs"],
+                    },
+                    routine: {
+                        name: "Rutina & reuniones",
+                        desc: "Reuniones con agenda, decisiones y próximos pasos; acuerdos y compromisos ligados a la reunión de origen, cada uno con responsable y plazo.",
+                        tags: ["Agenda", "Decisiones", "Compromisos"],
+                    },
+                    people: {
+                        name: "Personas & desarrollo",
+                        desc: "Seguimientos, feedbacks, PDIs y mediación de conflictos — registros confidenciales con reglas de acceso propias: un gestor no ve lo que registró otro.",
+                        tags: ["Feedback", "PDI", "Privacidad por rol"],
+                    },
+                    performance: {
+                        name: "Desempeño & mejora",
+                        desc: "Registro de incidencias, planes de acción con responsable y plazo, y un panel de indicadores con meta, unidad y gráfico de evolución.",
+                        tags: ["Planes de acción", "Indicadores", "Metas"],
+                    },
+                    tracking: {
+                        name: "Seguimiento continuo",
+                        desc: "Calendario de seguimiento y agenda integrada que reúnen, por fecha, eventos, reuniones, compromisos, acciones y actividades del período.",
+                        tags: ["Agenda integrada", "Calendario", "Informes PDF"],
+                    },
+                },
+            },
+            kesia: {
+                tagline:
+                    "Sitio-portafolio para una diseñadora gráfica — presenta identidad visual, logos y contenido para redes, del concepto a la pieza final.",
+                summary:
+                    "Desarrollé el portafolio de Kesia Silva, diseñadora gráfica de Florianópolis: un sitio de página única que organiza seis proyectos de identidad visual, su trayectoria y sus servicios en una navegación fluida. Interfaz a medida para su marca, con tipografía editorial y diseño responsivo del escritorio al móvil.",
+                role: "Frontend — interfaz, desarrollo y despliegue",
+                components: {
+                    hero: {
+                        name: "Apertura & navegación",
+                        desc: "Hero con tipografía editorial, índice navegable de las secciones y desplazamiento suave entre ellas, con CTA directo al contacto.",
+                        tags: ["Tipografía editorial", "Índice", "Scroll suave"],
+                    },
+                    projects: {
+                        name: "Galería de proyectos",
+                        desc: "Seis proyectos de identidad visual y contenido para redes, cada uno con descripción y grilla de piezas — logo, empaque, tarjeta y social.",
+                        tags: ["6 proyectos", "Grilla de piezas"],
+                    },
+                    journey: {
+                        name: "Trayectoria & servicios",
+                        desc: "Experiencia, formación y los ocho servicios de la diseñadora, organizados en secciones escaneables.",
+                        tags: ["Experiencia", "8 servicios"],
+                    },
+                    contact: {
+                        name: "Contacto & responsivo",
+                        desc: "Sección de contacto con e-mail y LinkedIn y diseño totalmente responsivo, del escritorio al móvil.",
+                        tags: ["Responsivo", "Contacto"],
+                    },
+
                 },
             },
         },

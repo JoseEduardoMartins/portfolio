@@ -102,7 +102,7 @@ const Infinider = () => {
                 </p>
               </div>
               <div className="flex flex-wrap gap-1.5">
-                {component.stack.map((tech) => (
+                {(component.stack ?? []).map((tech) => (
                   <span
                     key={tech}
                     className="py-[3px] px-[9px] text-[11.5px] font-medium text-text-muted bg-surface-2 border border-border rounded-md"
