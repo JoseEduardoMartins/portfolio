@@ -1,3 +1,11 @@
+# [1.5.0](https://github.com/JoseEduardoMartins/portfolio/compare/v1.4.0...v1.5.0) (2026-11-27)
+
+
+### Features
+
+* **ui:** redesign com paleta azul-elétrico e novo logo ([93b5cab](https://github.com/JoseEduardoMartins/portfolio/commit/93b5cab0190269130b5a441f5c98771f69f8556e))
+* **work:** add Chavetta, Team Manager and Kesia case studies ([ba13185](https://github.com/JoseEduardoMartins/portfolio/commit/ba131850c7f349881870496f56c6b1e194ef2f58))
+
 # [1.4.0](https://github.com/JoseEduardoMartins/portfolio/compare/v1.3.0...v1.4.0) (2026-10-03)
 
 
