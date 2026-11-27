@@ -33,7 +33,7 @@ const Contact = () => {
 
         <div className="relative flex flex-wrap justify-center gap-3.5 mt-2.5">
           <a
-            className={`${actionBase} text-bg bg-accent border border-accent hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-12px_rgba(45,212,191,0.6)]`}
+            className={`${actionBase} text-bg bg-accent border border-accent hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-12px_rgba(47,91,255,0.6)]`}
             href={whatsappHref}
             target="_blank"
             rel="noreferrer"

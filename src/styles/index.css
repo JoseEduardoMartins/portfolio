@@ -1,24 +1,25 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #0a0f1e;
-  --color-bg-elevated: #0d1426;
-  --color-surface: #111a2e;
-  --color-surface-2: #16213b;
-  --color-surface-3: #1c2a47;
-  --color-border: rgba(148, 163, 184, 0.14);
-  --color-border-strong: rgba(148, 163, 184, 0.3);
+  --color-bg: #0b0e16;
+  --color-bg-elevated: #0e1220;
+  --color-surface: #141926;
+  --color-surface-2: #1a2132;
+  --color-surface-3: #222c42;
+  --color-border: rgba(148, 163, 184, 0.13);
+  --color-border-strong: rgba(148, 163, 184, 0.28);
 
-  --color-text: #e6edf7;
-  --color-text-muted: #93a4c3;
-  --color-text-dim: #64748b;
+  --color-text: #eef2fb;
+  --color-text-muted: #94a0bb;
+  --color-text-dim: #64728f;
 
-  --color-accent: #2dd4bf;
-  --color-accent-2: #38bdf8;
-  --color-accent-3: #818cf8;
+  --color-accent: #2f5bff;
+  --color-accent-2: #4d7bff;
+  --color-accent-3: #8aa6ff;
 
   --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
   --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
 
   --radius: 16px;
   --radius-sm: 10px;
@@ -27,17 +28,17 @@
 
 /* Custom properties sem utilitário direto (usar via bg-[var(--gradient)] etc.) */
 :root {
-  --accent-soft: rgba(45, 212, 191, 0.12);
-  --accent-softer: rgba(45, 212, 191, 0.06);
-  --gradient: linear-gradient(120deg, #2dd4bf 0%, #38bdf8 45%, #818cf8 100%);
+  --accent-soft: rgba(47, 91, 255, 0.14);
+  --accent-softer: rgba(47, 91, 255, 0.07);
+  --gradient: linear-gradient(115deg, #4d7bff 0%, #2f5bff 55%, #8aa6ff 100%);
   --gradient-soft: linear-gradient(
     120deg,
-    rgba(45, 212, 191, 0.16),
-    rgba(129, 140, 248, 0.16)
+    rgba(47, 91, 255, 0.18),
+    rgba(138, 166, 255, 0.16)
   );
-  --shadow: 0 24px 50px -24px rgba(2, 6, 23, 0.8);
+  --shadow: 0 24px 50px -24px rgba(2, 6, 23, 0.85);
   --shadow-glow: 0 0 0 1px var(--color-border),
-    0 20px 40px -24px rgba(45, 212, 191, 0.25);
+    0 20px 40px -24px rgba(47, 91, 255, 0.3);
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -45,13 +46,13 @@
    utilitários de animação nativos do Tailwind, ex.: animate-pulse). */
 @keyframes badgePulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.5);
+    box-shadow: 0 0 0 0 rgba(47, 91, 255, 0.5);
   }
   70% {
-    box-shadow: 0 0 0 10px rgba(45, 212, 191, 0);
+    box-shadow: 0 0 0 10px rgba(47, 91, 255, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(45, 212, 191, 0);
+    box-shadow: 0 0 0 0 rgba(47, 91, 255, 0);
   }
 }
 
@@ -85,12 +86,12 @@
     -moz-osx-font-smoothing: grayscale;
     background-image: radial-gradient(
         60rem 60rem at 80% -10%,
-        rgba(45, 212, 191, 0.1),
+        rgba(47, 91, 255, 0.14),
         transparent 60%
       ),
       radial-gradient(
         50rem 50rem at 0% 20%,
-        rgba(129, 140, 248, 0.1),
+        rgba(47, 91, 255, 0.07),
         transparent 55%
       );
     background-attachment: fixed;

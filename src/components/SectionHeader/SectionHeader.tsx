@@ -7,7 +7,7 @@ interface SectionHeaderProps {
 
 const SectionHeader = ({ eyebrow, title }: SectionHeaderProps) => (
   <Reveal className="flex flex-col gap-3 mb-2">
-    <span className="inline-flex items-center gap-2 text-[13.5px] font-medium text-text-dim">
+    <span className="inline-flex items-center gap-2 font-mono text-[13px] font-medium uppercase tracking-[0.08em] text-accent-3">
       <span className="h-1.5 w-1.5 rounded-full bg-accent" />
       {eyebrow}
     </span>

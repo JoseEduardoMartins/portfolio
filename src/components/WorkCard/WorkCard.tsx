@@ -24,7 +24,7 @@ const WorkCard = ({ work }: WorkCardProps) => {
             loading="lazy"
             className="h-full w-full object-cover object-left-top transition-transform duration-500 ease-[var(--ease)] group-hover:scale-[1.04]"
           />
-          <span className="absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(10,15,30,0.55))]" />
+          <span className="absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(11,14,22,0.55))]" />
         </div>
 
         <div className="flex flex-col gap-5 p-7 sm:p-9">

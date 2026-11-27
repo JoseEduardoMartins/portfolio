@@ -9,7 +9,7 @@ interface PageHeaderProps {
 const PageHeader = ({ eyebrow, title, intro }: PageHeaderProps) => (
   <Reveal as="header" className="flex flex-col gap-5">
     {eyebrow && (
-      <span className="text-sm font-medium tracking-[0.02em] text-text-dim">
+      <span className="font-mono text-[13px] font-medium uppercase tracking-[0.08em] text-accent-3">
         {eyebrow}
       </span>
     )}
