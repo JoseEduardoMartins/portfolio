@@ -40,7 +40,8 @@ const Introduction = () => {
           Eduardo Martins
         </h1>
 
-        <h2 className="font-display text-[clamp(1.4rem,4vw,2.3rem)] font-semibold text-text tracking-[-0.01em]">
+        <h2 className="font-mono text-accent-3 text-[clamp(1rem,2.4vw,1.25rem)] font-medium tracking-[0.01em]">
+          <span className="text-accent/70">&gt;{" "}</span>
           <Translator path="home.introduction.developer" />
         </h2>
 
@@ -50,7 +51,7 @@ const Introduction = () => {
 
         <div className="flex flex-wrap gap-3.5 mt-1.5">
           <a
-            className={`${actionBase} text-bg bg-accent border border-accent hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-12px_rgba(45,212,191,0.6)]`}
+            className={`${actionBase} text-bg bg-accent border border-accent hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-12px_rgba(47,91,255,0.6)]`}
             href={resume}
             target="_blank"
             rel="noreferrer"
