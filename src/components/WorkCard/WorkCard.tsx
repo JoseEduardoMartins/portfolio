@@ -30,7 +30,7 @@ const WorkCard = ({ work }: WorkCardProps) => {
         <div className="flex flex-col gap-5 p-7 sm:p-9">
           <div className="flex items-center justify-between">
             <span className="inline-flex items-center py-[5px] px-3 text-[12.5px] font-medium text-accent bg-[var(--accent-soft)] border border-border rounded-full">
-              {t("works.type")}
+              {t(work.typeKey)}
             </span>
             <span className="text-[13px] text-text-dim">{work.year}</span>
           </div>
